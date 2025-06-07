@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop } from "lucide-react";
+
+import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
@@ -67,7 +68,12 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/061017e6-8ed4-47a9-9ad1-85295e52f719.png" 
+              alt="TiewalaVakil Logo" 
+              className="h-10 w-auto"
+            />
             <div className="text-2xl font-bold text-primary">
               <span className="text-red-700">T</span>IEWALAVAKIL
             </div>
@@ -97,36 +103,83 @@ const Index = () => {
         <MessageCircle className="w-6 h-6" />
       </a>
 
-      {/* Hero Section */}
-      <section id="home" className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
-              India's Trusted Property Legal Partner
-              <span className="block text-red-700">Since the 1940s</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              75+ years of trust, 33+ years of legal expertise. Now offering complete online property legal services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Scale className="w-5 h-5 mr-2" />
-                Get Legal Help Now
+      {/* Side Consultant Widget */}
+      <div className="fixed left-6 bottom-6 z-40 hidden lg:block">
+        <Card className="w-64 shadow-xl border-2 border-primary/20">
+          <CardContent className="p-4">
+            <div className="flex items-center space-x-3 mb-3">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
+                <img 
+                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                  alt="Advocate Ajay Shankar Sharma" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-primary">Advocate Ajay Shankar Sharma</h4>
+                <p className="text-xs text-muted-foreground">Legal Expert - 33+ Years</p>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground mb-3">Need immediate legal help? I'm here to assist you with property matters.</p>
+            <div className="space-y-2">
+              <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                <Phone className="w-3 h-3 mr-2" />
+                Call Now
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <Phone className="w-5 h-5 mr-2" />
-                Call: 7037455191
+              <Button size="sm" variant="outline" className="w-full">
+                <MessageCircle className="w-3 h-3 mr-2" />
+                WhatsApp
               </Button>
             </div>
-            <div className="mt-8 inline-flex items-center bg-red-700 text-white px-4 py-2 rounded-full">
-              <Award className="w-5 h-5 mr-2" />
-              License No. 1 – Legacy Since Pre-Independence
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Hero Section */}
+      <section id="home" className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
+                India's Trusted Property Legal Partner
+                <span className="block text-red-700">Since the 1940s</span>
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                75+ years of trust, 33+ years of legal expertise. Now offering complete online property legal services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Scale className="w-5 h-5 mr-2" />
+                  Get Legal Help Now
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: 7037455191
+                </Button>
+              </div>
+              <div className="mt-8 inline-flex items-center bg-red-700 text-white px-4 py-2 rounded-full">
+                <Award className="w-5 h-5 mr-2" />
+                License No. 1 – Legacy Since Pre-Independence
+              </div>
+            </div>
+            <div className="relative">
+              <div className="rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                  alt="Advocate Ajay Shankar Sharma - Current Legal Expert" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-lg shadow-lg">
+                <p className="text-sm font-bold text-primary">Advocate Ajay Shankar Sharma</p>
+                <p className="text-xs text-muted-foreground">33+ Years Legal Experience</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Legacy Section */}
+      {/* Legacy Section with Father's Photos */}
       <section id="about" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -140,30 +193,77 @@ const Index = () => {
             </p>
           </div>
           
-          {/* Timeline */}
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+          {/* Heritage Timeline with Photos */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-700 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8" />
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-red-700 shadow-lg">
+                <img 
+                  src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
+                  alt="Late Father - License No. 1 Holder" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="font-bold text-primary">1940s</h3>
-              <p className="text-muted-foreground">Family Legacy Begins</p>
+              <h3 className="font-bold text-primary mb-2">1940s - Foundation</h3>
+              <p className="text-muted-foreground">Late Father established our legal legacy with License No. 1</p>
             </div>
-            <div className="hidden md:block w-16 h-1 bg-border"></div>
+            
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
-                <Scale className="w-8 h-8" />
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                <img 
+                  src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
+                  alt="Legacy continues through generations" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="font-bold text-primary">1980s</h3>
-              <p className="text-muted-foreground">Modern Legal Practice</p>
+              <h3 className="font-bold text-primary mb-2">1980s - Growth</h3>
+              <p className="text-muted-foreground">Expanding legal practice with traditional values</p>
             </div>
-            <div className="hidden md:block w-16 h-1 bg-border"></div>
+            
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Laptop className="w-8 h-8" />
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg">
+                <img 
+                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                  alt="Current Advocate - Digital Innovation" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="font-bold text-primary">Today</h3>
-              <p className="text-muted-foreground">Digital Innovation</p>
+              <h3 className="font-bold text-primary mb-2">Today - Innovation</h3>
+              <p className="text-muted-foreground">Advocate Ajay Shankar Sharma - Digital legal services</p>
+            </div>
+          </div>
+
+          {/* Personal Touch Section */}
+          <div className="bg-muted/30 rounded-lg p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">तीन पीढ़ियों का भरोसा</h3>
+                <p className="text-muted-foreground mb-4">
+                  हमारे पिता जी ने 1940 के दशक में इस परंपरा की शुरुआत की थी। आज एडवोकेट अजय शंकर शर्मा उसी विश्वास और अनुभव के साथ 
+                  आपकी संपत्ति की कानूनी जरूरतों को पूरा करते हैं।
+                </p>
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center">
+                    <Award className="w-5 h-5 text-red-700 mr-2" />
+                    <span className="text-sm font-medium">License No. 1 Legacy</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Users className="w-5 h-5 text-primary mr-2" />
+                    <span className="text-sm font-medium">33+ Years Experience</span>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
+                  alt="Heritage Photo 1" 
+                  className="rounded-lg shadow-md w-full h-32 object-cover"
+                />
+                <img 
+                  src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
+                  alt="Heritage Photo 2" 
+                  className="rounded-lg shadow-md w-full h-32 object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -221,20 +321,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Online Consultation */}
+      {/* Online Consultation with Advocate Photo */}
       <section id="consultation" className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Online Legal Help – PAN India
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            No matter where you live – legal help is just a click away. Book consultations via phone, 
-            video call, or WhatsApp. Get verified documents without visiting a lawyer in person.
-          </p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-            <Phone className="w-5 h-5 mr-2" />
-            Call Advocate Now – 7037455191
-          </Button>
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Online Legal Help – PAN India
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                No matter where you live – legal help is just a click away. Book consultations via phone, 
+                video call, or WhatsApp. Get verified documents without visiting a lawyer in person.
+              </p>
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Advocate Now – 7037455191
+              </Button>
+            </div>
+            <div className="text-center">
+              <div className="inline-block relative">
+                <div className="w-64 h-64 mx-auto rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                  <img 
+                    src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                    alt="Advocate Ajay Shankar Sharma - Available for Online Consultation" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  ● Available Now
+                </div>
+              </div>
+              <div className="mt-6 bg-white/10 backdrop-blur rounded-lg p-4">
+                <p className="font-bold">Advocate Ajay Shankar Sharma</p>
+                <p className="text-sm opacity-90">33+ Years Legal Experience</p>
+                <p className="text-sm opacity-90">Available for Online Consultation</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -320,9 +443,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="text-red-400">T</span>IEWALAVAKIL
-              </h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/061017e6-8ed4-47a9-9ad1-85295e52f719.png" 
+                  alt="TiewalaVakil Logo" 
+                  className="h-8 w-auto"
+                />
+                <h3 className="text-2xl font-bold">
+                  <span className="text-red-400">T</span>IEWALAVAKIL
+                </h3>
+              </div>
               <p className="text-gray-300 mb-4">
                 India's trusted property legal services platform, backed by 75+ years of heritage. 
                 We simplify registration, documentation, and consultation across India.
