@@ -25,41 +25,41 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "राकेश कुमार",
-      location: "हापुड़",
-      text: "बहुत अच्छी सेवा! प्रॉपर्टी रजिस्ट्रेशन में शुरू से अंत तक मदद मिली। बहुत भरोसेमंद।",
+      name: "Rakesh Kumar",
+      location: "Hapur",
+      text: "Excellent service! Got complete help from start to finish in property registration. Very trustworthy and reliable.",
       rating: 5
     },
     {
-      name: "प्रिया शर्मा", 
-      location: "मेरठ",
-      text: "पहली बार प्रॉपर्टी खरीदने में उनकी सलाह बहुत काम आई। पूरी प्रक्रिया आसान बना दी।",
+      name: "Priya Sharma", 
+      location: "Meerut",
+      text: "Their advice was very helpful for my first property purchase. They made the entire process simple and easy.",
       rating: 5
     },
     {
-      name: "अमित गुप्ता",
-      location: "गाजियाबाद", 
-      text: "वीडियो कॉल पर कानूनी सलाह मिली। प्रोफेशनल सेवा, उचित फीस।",
+      name: "Amit Gupta",
+      location: "Ghaziabad", 
+      text: "Got legal advice through video call. Professional service with reasonable fees. Highly recommended.",
       rating: 5
     }
   ];
 
   const faqs = [
     {
-      question: "प्रॉपर्टी रजिस्ट्रेशन कैसे करें?",
-      answer: "हम शुरू से अंत तक प्रॉपर्टी रजिस्ट्रेशन की सेवा देते हैं। बस हमें फोन करें, अपने दस्तावेज़ शेयर करें, और हम पूरी प्रक्रिया संभाल लेंगे।"
+      question: "How to register property?",
+      answer: "We provide end-to-end property registration services. Just call us, share your documents, and we'll handle the complete process for you."
     },
     {
-      question: "पावर ऑफ अटॉर्नी की वैधता क्या है?",
-      answer: "पावर ऑफ अटॉर्नी तब तक वैध रहता है जब तक मूल व्यक्ति इसे रद्द न कर दे या उसकी मृत्यु न हो जाए।"
+      question: "What is the validity of Power of Attorney?",
+      answer: "Power of Attorney remains valid until the principal person revokes it or passes away. We ensure proper documentation for maximum validity."
     },
     {
-      question: "गिफ्ट डीड के जरिए प्रॉपर्टी कैसे ट्रांसफर करें?",
-      answer: "गिफ्ट डीड के लिए उचित दस्तावेज़, स्टाम्प ड्यूटी और रजिस्ट्रेशन की जरूरत होती है। हम पूरी प्रक्रिया संभालते हैं।"
+      question: "How to transfer property through Gift Deed?",
+      answer: "Gift Deed requires proper documentation, stamp duty payment, and registration. We handle the complete process including legal compliance."
     },
     {
-      question: "क्या अन्य राज्य से सलाह ले सकते हैं?",
-      answer: "हां! हम फोन, वीडियो कॉल और व्हाट्सऐप के जरिए सलाह देते हैं। हमारी विशेषज्ञता पूरे भारत में लागू होती है।"
+      question: "Can I get consultation from other states?",
+      answer: "Yes! We provide consultation via phone, video call, and WhatsApp. Our expertise applies across India with local Hapur office support."
     }
   ];
 
@@ -70,9 +70,9 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/f4f63bd6-23e6-4a96-bfdc-15ea3fe45aa6.png" 
+              src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
               alt="Tiewala Vakil Logo" 
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           <nav className="hidden md:flex space-x-8">
@@ -123,16 +123,16 @@ const Index = () => {
             </div>
             <div className="bg-primary/10 rounded-lg p-4 mb-5">
               <p className="text-sm text-primary font-bold mb-2">🏛️ License No. 1 Legacy Holder</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">तत्काल कानूनी सहायता के लिए संपर्क करें। प्रॉपर्टी मामलों में विशेषज्ञ सलाह।</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
             </div>
             <div className="space-y-3">
               <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
                 <Phone className="w-4 h-4 mr-2" />
-                तुरंत कॉल करें
+                Call Now
               </Button>
               <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold">
                 <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp पर बात करें
+                WhatsApp Chat
               </Button>
             </div>
           </CardContent>
@@ -145,16 +145,16 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h1 className="text-5xl md:text-7xl font-bold text-primary mb-8 leading-tight">
-                हापुड़ का विश्वसनीय कानूनी साथी
+                Hapur's Trusted Legal Partner
                 <span className="block text-red-700 text-4xl md:text-5xl mt-2">Since the 1950s</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
-                75+ साल का भरोसा, 33+ साल की कानूनी विशेषज्ञता। अब मिल रही है संपूर्ण ऑनलाइन प्रॉपर्टी कानूनी सेवाएं।
+                75+ years of trust, 33+ years of legal expertise. Now offering comprehensive online property legal services from Hapur.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg font-semibold px-8 py-4">
                   <Scale className="w-5 h-5 mr-2" />
-                  अभी कानूनी मदद लें
+                  Get Legal Help Now
                 </Button>
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg font-semibold px-8 py-4">
                   <Phone className="w-5 h-5 mr-2" />
@@ -190,11 +190,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              पीढ़ियों से चली आ रही कानूनी परंपरा
+              Generations of Legal Tradition
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              हमारा परिवार 1950 के दशक से कानूनी सेवा क्षेत्र में है। आज एडवोकेट अजय शंकर शर्मा इस विरासत को आगे बढ़ाते हुए, 
-              पारंपरिक कानूनी विशेषज्ञता को डिजिटल नवाचार के साथ जोड़कर हापुड़ से पूरे क्षेत्र की सेवा कर रहे हैं।
+              Our family has been in the legal service sector since the 1950s. Today, Advocate Ajay Shankar Sharma continues this legacy, 
+              combining traditional legal expertise with digital innovation to serve the entire region from Hapur.
             </p>
           </div>
           
@@ -208,8 +208,8 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">स्वर्गीय पिता जी</h3>
-              <p className="text-muted-foreground text-lg">कानूनी विरासत के संस्थापक</p>
+              <h3 className="text-xl font-bold text-primary mb-3">Late Father</h3>
+              <p className="text-muted-foreground text-lg">Founder of Legal Heritage</p>
             </div>
             
             <div className="text-center">
@@ -220,8 +220,8 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">स्वर्गीय चाचा जी</h3>
-              <p className="text-muted-foreground text-lg">पारिवारिक कानूनी परंपरा</p>
+              <h3 className="text-xl font-bold text-primary mb-3">Late Uncle</h3>
+              <p className="text-muted-foreground text-lg">Family Legal Tradition</p>
             </div>
 
             <div className="text-center">
@@ -232,18 +232,18 @@ const Index = () => {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">एडवोकेट अजय शंकर शर्मा</h3>
-              <p className="text-muted-foreground text-lg">वर्तमान कानूनी विशेषज्ञ</p>
+              <h3 className="text-xl font-bold text-primary mb-3">Advocate Ajay Shankar Sharma</h3>
+              <p className="text-muted-foreground text-lg">Current Legal Expert</p>
             </div>
           </div>
 
           {/* Personal Touch Section */}
           <div className="bg-muted/30 rounded-xl p-10">
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-primary mb-6">तीन पीढ़ियों का भरोसा - हापुड़ से सेवा</h3>
+              <h3 className="text-3xl font-bold text-primary mb-6">Three Generations of Trust - Serving from Hapur</h3>
               <p className="text-muted-foreground mb-8 text-xl leading-relaxed">
-                1950 के दशक से शुरू हुई इस परंपरा को आज एडवोकेट अजय शंकर शर्मा हापुड़ से संचालित करते हुए 
-                आपकी सभी संपत्ति संबंधी कानूनी जरूरतों को पूरा करते हैं।
+                The tradition that began in the 1950s is now carried forward by Advocate Ajay Shankar Sharma from Hapur, 
+                fulfilling all your property-related legal needs with the same dedication and expertise.
               </p>
               <div className="flex justify-center items-center space-x-12">
                 <div className="flex items-center">
@@ -252,7 +252,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-primary mr-3" />
-                  <span className="text-lg font-semibold">हापुड़ स्थित कार्यालय</span>
+                  <span className="text-lg font-semibold">Hapur Office Location</span>
                 </div>
               </div>
             </div>
@@ -260,18 +260,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Hindi Services Section */}
+      {/* Enhanced English Services Section */}
       <section className="py-20 bg-gradient-to-r from-primary/5 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              हमारी सेवाएँ ✨
+              Our Services ✨
             </h2>
             <p className="text-xl text-muted-foreground max-w-5xl mx-auto mb-8 leading-relaxed">
-              हम आपके सभी प्रॉपर्टी व लीगल डॉक्यूमेंट्स से जुड़े कार्यों को सरल, सुरक्षित और भरोसेमंद तरीके से पूरा कराने के लिए प्रतिबद्ध हैं।
+              We are committed to completing all your property and legal document related work in a simple, secure and trustworthy manner.
             </p>
             <p className="text-2xl font-bold text-primary">
-              Tiewalavakil के साथ पाएँ एक ही जगह पर सम्पूर्ण समाधान! ✅
+              Get comprehensive solutions in one place with Tiewalavakil! ✅
             </p>
           </div>
 
@@ -280,21 +280,21 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
               <CardContent className="p-8">
                 <FileText className="w-16 h-16 text-primary mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">📄 लीगल डॉक्यूमेंट्स तैयार करना व रजिस्ट्री सेवाएँ</h3>
+                <h3 className="text-2xl font-bold text-primary mb-6">📄 Legal Document Preparation & Registry Services</h3>
                 <ul className="text-base text-muted-foreground space-y-3 leading-relaxed">
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> विक्रय पत्र (Sale Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> दान पत्र (Gift Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> बंधक पत्र (Mortgage Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> इकरारनामा (Agreement to Sale) — कब्जा / बिना कब्जा</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> विनिमय विलेख (Exchange Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> पट्टा विलेख (Lease Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> वसीयतनामा (Will)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> मुख्तयारनामा (Power of Attorney)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> गोदनामा (Adoption Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> ट्रस्ट डीड (Trust Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> कैंसिलेशन (Cancellation Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> करेक्शन डीड (Correction Deed)</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> शादी रजिस्ट्रेशन (Marriage Registration)</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Sale Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Gift Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Mortgage Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Agreement to Sale — With/Without Possession</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Exchange Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Lease Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Will Testament</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Power of Attorney</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Adoption Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Trust Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Cancellation Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Correction Deed</li>
+                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Marriage Registration</li>
                 </ul>
               </CardContent>
             </Card>
@@ -303,7 +303,7 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/30">
               <CardContent className="p-8">
                 <Search className="w-16 h-16 text-blue-600 mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">🏠 प्रॉपर्टी डॉक्यूमेंट्स सेवाएँ</h3>
+                <h3 className="text-2xl font-bold text-primary mb-6">🏠 Property Document Services</h3>
                 <ul className="text-base text-muted-foreground space-y-4 leading-relaxed">
                   <li className="flex items-start"><span className="text-blue-600 font-bold mr-2">•</span> Property Documents Verification</li>
                   <li className="flex items-start"><span className="text-blue-600 font-bold mr-2">•</span> Property Documents Drafting</li>
@@ -316,10 +316,10 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/30">
               <CardContent className="p-8">
                 <Gavel className="w-16 h-16 text-red-600 mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">🔍 अन्य विशेष सेवाएँ</h3>
+                <h3 className="text-2xl font-bold text-primary mb-6">🔍 Other Special Services</h3>
                 <ul className="text-base text-muted-foreground space-y-4 leading-relaxed">
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Mutation / Name Transfer (नामांतरण / नाम परिवर्तन)</li>
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Expert Resolution of Stamp Duty Case</li>
+                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Mutation / Name Transfer</li>
+                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Expert Resolution of Stamp Duty Cases</li>
                   <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Legal Consultancy for Property Matters</li>
                   <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Online Legal Help & Documents Assistant</li>
                 </ul>
@@ -330,24 +330,24 @@ const Index = () => {
           <div className="text-center mt-16">
             <div className="bg-white rounded-xl p-8 shadow-xl max-w-4xl mx-auto border-2 border-primary/20">
               <h4 className="text-2xl font-bold text-primary mb-6">
-                आपके हर दस्तावेज़ की जरूरत का एकमात्र विश्वसनीय समाधान — Tiewalavakil के साथ।
+                The only reliable solution for all your document needs — with Tiewalavakil.
               </h4>
               <div className="grid grid-cols-2 gap-6 text-lg text-muted-foreground">
                 <div className="flex items-center justify-center">
                   <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">सटीक प्रक्रिया</span>
+                  <span className="font-semibold">Accurate Process</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">संपूर्ण दस्तावेजी तैयारी</span>
+                  <span className="font-semibold">Complete Documentation</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">प्रोफेशनल सलाह</span>
+                  <span className="font-semibold">Professional Advice</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">विश्वसनीयता व गोपनीयता की गारंटी</span>
+                  <span className="font-semibold">Reliability & Confidentiality Guarantee</span>
                 </div>
               </div>
             </div>
@@ -413,15 +413,15 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                ऑनलाइन कानूनी सहायता – हापुड़ से आपकी सेवा में
+                Online Legal Assistance – At Your Service from Hapur
               </h2>
               <p className="text-xl mb-10 opacity-90 leading-relaxed">
-                आप कहीं भी रहते हों – कानूनी मदद सिर्फ एक क्लिक की दूरी पर है। फोन, वीडियो कॉल या व्हाट्सऐप के जरिए 
-                परामर्श बुक करें। हमारे हापुड़ कार्यालय आए बिना ही सत्यापित दस्तावेज़ प्राप्त करें।
+                Wherever you live – legal help is just one click away. Book consultation via phone, video call, or WhatsApp. 
+                Get verified documents without visiting our Hapur office.
               </p>
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
                 <Phone className="w-5 h-5 mr-2" />
-                अभी एडवोकेट को कॉल करें – 7037455191
+                Call Advocate Now – 7037455191
               </Button>
             </div>
             <div className="text-center">
@@ -434,13 +434,13 @@ const Index = () => {
                   />
                 </div>
                 <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full text-base font-bold">
-                  ● उपलब्ध अभी
+                  ● Available Now
                 </div>
               </div>
               <div className="mt-8 bg-white/10 backdrop-blur rounded-xl p-6">
                 <p className="font-bold text-xl">Advocate Ajay Shankar Sharma</p>
-                <p className="text-base opacity-90 mt-2">ऑनलाइन परामर्श के लिए उपलब्ध</p>
-                <p className="text-base opacity-90">हापुड़, उत्तर प्रदेश स्थित</p>
+                <p className="text-base opacity-90 mt-2">Available for Online Consultation</p>
+                <p className="text-base opacity-90">Based in Hapur, Uttar Pradesh</p>
               </div>
             </div>
           </div>
@@ -451,7 +451,7 @@ const Index = () => {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            हमारे ग्राहकों की राय
+            Client Testimonials
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {testimonials.map((testimonial, index) => (
@@ -479,7 +479,7 @@ const Index = () => {
       <section id="faq" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            अक्सर पूछे जाने वाले सवाल
+            Frequently Asked Questions
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
@@ -506,19 +506,19 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-blue-800 text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            अपनी संपत्ति के लिए कानूनी स्पष्टता चाहिए?
+            Need Legal Clarity for Your Property?
           </h2>
           <p className="text-2xl mb-10 opacity-90">
-            एक विश्वसनीय कानूनी विशेषज्ञ से 1 क्लिक में बात करें।
+            Talk to a trusted legal expert in just 1 click.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
               <Phone className="w-5 h-5 mr-2" />
-              अभी एडवोकेट को कॉल करें – 7037455191
+              Call Advocate Now – 7037455191
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
               <MessageCircle className="w-5 h-5 mr-2" />
-              व्हाट्सऐप परामर्श
+              WhatsApp Consultation
             </Button>
           </div>
         </div>
@@ -531,18 +531,18 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <img 
-                  src="/lovable-uploads/f4f63bd6-23e6-4a96-bfdc-15ea3fe45aa6.png" 
+                  src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
                   alt="Tiewala Vakil Logo" 
                   className="h-16 w-auto"
                 />
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                भारत का विश्वसनीय संपत्ति कानूनी सेवा प्लेटफॉर्म, 75+ वर्षों की विरासत के साथ। 
-                हम हापुड़ कार्यालय से रजिस्ट्रेशन, दस्तावेज़ीकरण और परामर्श की सेवा सरल बनाते हैं।
+                India's trusted property legal service platform, with 75+ years of heritage. 
+                We simplify registration, documentation and consultation services from our Hapur office.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xl">संपर्क</h4>
+              <h4 className="font-bold mb-6 text-xl">Contact</h4>
               <div className="space-y-4 text-gray-300">
                 <div className="flex items-center text-lg">
                   <Phone className="w-5 h-5 mr-3" />
@@ -553,7 +553,7 @@ const Index = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">हापुड़, उत्तर प्रदेश</div>
+                <div className="text-lg">Hapur, Uttar Pradesh</div>
                 <div className="text-base font-bold text-red-400">License No. 1</div>
               </div>
             </div>
