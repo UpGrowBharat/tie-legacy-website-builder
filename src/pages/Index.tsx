@@ -103,9 +103,15 @@ const Index = () => {
         <MessageCircle className="w-6 h-6" />
       </a>
 
-      {/* Enhanced Side Consultant Widget */}
-      <div className="fixed left-6 bottom-6 z-40 hidden lg:block">
-        <Card className="w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50">
+      {/* Enhanced Hover Consultant Widget */}
+      <div className="fixed left-6 bottom-6 z-40 hidden lg:block group">
+        {/* Compact Button - Always Visible */}
+        <div className="w-16 h-16 bg-primary rounded-full shadow-lg cursor-pointer flex items-center justify-center group-hover:opacity-0 transition-all duration-300">
+          <Phone className="w-8 h-8 text-white" />
+        </div>
+        
+        {/* Expanded Card - Shows on Hover */}
+        <Card className="absolute bottom-0 left-0 w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4 mb-5">
               <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-primary shadow-lg">
