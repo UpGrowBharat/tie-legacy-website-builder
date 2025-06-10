@@ -26,7 +26,7 @@ const Index = () => {
   const testimonials = [
     {
       name: "Rajesh Kumar",
-      location: "Ghaziabad",
+      location: "Hapur",
       text: "Excellent service! Helped me with property registration from start to finish. Very trustworthy.",
       rating: 5
     },
@@ -70,13 +70,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/061017e6-8ed4-47a9-9ad1-85295e52f719.png" 
-              alt="TiewalaVakil Logo" 
-              className="h-10 w-auto"
+              src="/lovable-uploads/f4f63bd6-23e6-4a96-bfdc-15ea3fe45aa6.png" 
+              alt="Tiewala Vakil Logo" 
+              className="h-12 w-auto"
             />
-            <div className="text-2xl font-bold text-primary">
-              <span className="text-red-700">T</span>IEWALAVAKIL
-            </div>
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
@@ -117,7 +114,7 @@ const Index = () => {
               </div>
               <div>
                 <h4 className="font-bold text-sm text-primary">Advocate Ajay Shankar Sharma</h4>
-                <p className="text-xs text-muted-foreground">Legal Expert - 33+ Years</p>
+                <p className="text-xs text-muted-foreground">Legal Expert</p>
               </div>
             </div>
             <p className="text-xs text-muted-foreground mb-3">Need immediate legal help? I'm here to assist you with property matters.</p>
@@ -142,7 +139,7 @@ const Index = () => {
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
                 India's Trusted Property Legal Partner
-                <span className="block text-red-700">Since the 1940s</span>
+                <span className="block text-red-700">Since the 1950s</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 75+ years of trust, 33+ years of legal expertise. Now offering complete online property legal services.
@@ -159,16 +156,19 @@ const Index = () => {
               </div>
               <div className="mt-8 inline-flex items-center bg-red-700 text-white px-4 py-2 rounded-full">
                 <Award className="w-5 h-5 mr-2" />
-                License No. 1 – Legacy Since Pre-Independence
+                License No. 1 – Legacy Since 1950s
               </div>
             </div>
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-2xl">
-                <img 
-                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
-                  alt="Advocate Ajay Shankar Sharma - Current Legal Expert" 
-                  className="w-full h-auto object-cover"
-                />
+                <div className="w-full h-80 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                    alt="Advocate Ajay Shankar Sharma - Current Legal Expert" 
+                    className="w-full h-full object-cover object-center"
+                    style={{ objectPosition: '50% 30%' }}
+                  />
+                </div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-lg shadow-lg">
                 <p className="text-sm font-bold text-primary">Advocate Ajay Shankar Sharma</p>
@@ -179,7 +179,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Legacy Section with Father's Photos */}
+      {/* Legacy Section with Family Photos */}
       <section id="about" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -187,14 +187,14 @@ const Index = () => {
               Legal Wisdom Passed Down Generations
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our family has been serving the legal community since the 1940s, with my late father holding the prestigious License No. 1. 
+              Our family has been serving the legal community since the 1950s, with our elders holding prestigious legal positions. 
               Today, Advocate Ajay Shankar Sharma continues this legacy, modernizing traditional legal expertise with digital innovation 
-              to serve clients across India.
+              to serve clients across India from Hapur.
             </p>
           </div>
           
           {/* Heritage Timeline with Photos */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-red-700 shadow-lg">
                 <img 
@@ -203,32 +203,20 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold text-primary mb-2">1940s - Foundation</h3>
-              <p className="text-muted-foreground">Late Father established our legal legacy with License No. 1</p>
+              <h3 className="font-bold text-primary mb-2">Late Father</h3>
+              <p className="text-muted-foreground">Legal Legacy Holder</p>
             </div>
             
             <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-red-700 shadow-lg">
                 <img 
-                  src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
-                  alt="Legacy continues through generations" 
+                  src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
+                  alt="Late Uncle - Legal Family Heritage" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold text-primary mb-2">1980s - Growth</h3>
-              <p className="text-muted-foreground">Expanding legal practice with traditional values</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg">
-                <img 
-                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
-                  alt="Current Advocate - Digital Innovation" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-primary mb-2">Today - Innovation</h3>
-              <p className="text-muted-foreground">Advocate Ajay Shankar Sharma - Digital legal services</p>
+              <h3 className="font-bold text-primary mb-2">Late Uncle</h3>
+              <p className="text-muted-foreground">Family Legal Tradition</p>
             </div>
           </div>
 
@@ -238,8 +226,8 @@ const Index = () => {
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">तीन पीढ़ियों का भरोसा</h3>
                 <p className="text-muted-foreground mb-4">
-                  हमारे पिता जी ने 1940 के दशक में इस परंपरा की शुरुआत की थी। आज एडवोकेट अजय शंकर शर्मा उसी विश्वास और अनुभव के साथ 
-                  आपकी संपत्ति की कानूनी जरूरतों को पूरा करते हैं।
+                  हमारे बुजुर्गों ने 1950 के दशक में इस परंपरा की शुरुआत की थी। आज एडवोकेट अजय शंकर शर्मा उसी विश्वास और अनुभव के साथ 
+                  हापुड़ से आपकी संपत्ति की कानूनी जरूरतों को पूरा करते हैं।
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
@@ -247,8 +235,8 @@ const Index = () => {
                     <span className="text-sm font-medium">License No. 1 Legacy</span>
                   </div>
                   <div className="flex items-center">
-                    <Users className="w-5 h-5 text-primary mr-2" />
-                    <span className="text-sm font-medium">33+ Years Experience</span>
+                    <MapPin className="w-5 h-5 text-primary mr-2" />
+                    <span className="text-sm font-medium">Based in Hapur</span>
                   </div>
                 </div>
               </div>
@@ -259,7 +247,7 @@ const Index = () => {
                   className="rounded-lg shadow-md w-full h-32 object-cover"
                 />
                 <img 
-                  src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
+                  src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
                   alt="Heritage Photo 2" 
                   className="rounded-lg shadow-md w-full h-32 object-cover"
                 />
@@ -273,20 +261,20 @@ const Index = () => {
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Why TiewalaVakil.in?
+            Why Choose Us?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <BookOpen className="w-12 h-12 text-red-700 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-2">Generations of Trust</h3>
-                <p className="text-muted-foreground">Since 1940s</p>
+                <p className="text-muted-foreground">Since 1950s</p>
               </CardContent>
             </Card>
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <Scale className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">33+ Years of Advocacy</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Experienced Legal Practice</h3>
                 <p className="text-muted-foreground">Real courtroom & registry experience</p>
               </CardContent>
             </Card>
@@ -294,7 +282,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <Laptop className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-2">Online Legal Help</h3>
-                <p className="text-muted-foreground">Book from any city or village in India</p>
+                <p className="text-muted-foreground">Serving from Hapur to all of India</p>
               </CardContent>
             </Card>
           </div>
@@ -331,7 +319,7 @@ const Index = () => {
               </h2>
               <p className="text-xl mb-8 opacity-90">
                 No matter where you live – legal help is just a click away. Book consultations via phone, 
-                video call, or WhatsApp. Get verified documents without visiting a lawyer in person.
+                video call, or WhatsApp. Get verified documents without visiting our Hapur office in person.
               </p>
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
                 <Phone className="w-5 h-5 mr-2" />
@@ -353,8 +341,8 @@ const Index = () => {
               </div>
               <div className="mt-6 bg-white/10 backdrop-blur rounded-lg p-4">
                 <p className="font-bold">Advocate Ajay Shankar Sharma</p>
-                <p className="text-sm opacity-90">33+ Years Legal Experience</p>
                 <p className="text-sm opacity-90">Available for Online Consultation</p>
+                <p className="text-sm opacity-90">Based in Hapur, UP</p>
               </div>
             </div>
           </div>
@@ -445,17 +433,14 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/061017e6-8ed4-47a9-9ad1-85295e52f719.png" 
-                  alt="TiewalaVakil Logo" 
+                  src="/lovable-uploads/f4f63bd6-23e6-4a96-bfdc-15ea3fe45aa6.png" 
+                  alt="Tiewala Vakil Logo" 
                   className="h-8 w-auto"
                 />
-                <h3 className="text-2xl font-bold">
-                  <span className="text-red-400">T</span>IEWALAVAKIL
-                </h3>
               </div>
               <p className="text-gray-300 mb-4">
                 India's trusted property legal services platform, backed by 75+ years of heritage. 
-                We simplify registration, documentation, and consultation across India.
+                We simplify registration, documentation, and consultation across India from our Hapur office.
               </p>
             </div>
             <div>
@@ -470,7 +455,7 @@ const Index = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div>Email: support@tiewalavakil.in</div>
-                <div>Ghaziabad, Uttar Pradesh</div>
+                <div>Hapur, Uttar Pradesh</div>
                 <div className="text-sm">(serving PAN India)</div>
               </div>
             </div>
@@ -499,7 +484,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1940s</p>
+            <p>&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
           </div>
         </div>
       </footer>
