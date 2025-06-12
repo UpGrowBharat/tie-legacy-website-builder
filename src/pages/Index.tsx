@@ -1,4 +1,3 @@
-
 import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +18,7 @@ const Index = () => {
     { icon: FileText, title: "Will Drafting & Registration", desc: "Secure your family's future with proper will documentation" },
     { icon: Search, title: "Property Document Verification", desc: "Thorough verification of property documents" },
     { icon: FileText, title: "Mutation / Name Transfer", desc: "Transfer property ownership in revenue records" },
-    { icon: Receipt, title: "Stamp Duty Calculator & Help", desc: "Calculate and manage stamp duty requirements" },
+    { icon: Receipt, title: "Stamp Duty Calculator", desc: "Calculate stamp duty requirements" },
     { icon: Gavel, title: "Legal Consultation", desc: "Expert advice on title, ownership and property matters" }
   ];
 
@@ -84,7 +83,6 @@ const Index = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <div className="text-sm text-muted-foreground font-medium">License No. 1</div>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
               <Phone className="w-4 h-4 mr-2" />
               Call: 7037455191
@@ -114,7 +112,7 @@ const Index = () => {
         <Card className="absolute bottom-0 left-0 w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
           <CardContent className="p-6">
             <div className="flex items-center space-x-4 mb-5">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-primary shadow-lg">
+              <div className="w-16 h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                 <img 
                   src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
                   alt="Advocate Ajay Shankar Sharma" 
@@ -128,7 +126,7 @@ const Index = () => {
               </div>
             </div>
             <div className="bg-primary/10 rounded-lg p-4 mb-5">
-              <p className="text-sm text-primary font-bold mb-2">🏛️ License No. 1 Legacy Holder</p>
+              <p className="text-sm text-primary font-bold mb-2">🏛️ Legacy Since 1950s</p>
               <p className="text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
             </div>
             <div className="space-y-3">
@@ -167,10 +165,6 @@ const Index = () => {
                   Call: 7037455191
                 </Button>
               </div>
-              <div className="mt-10 inline-flex items-center bg-red-700 text-white px-6 py-3 rounded-full">
-                <Award className="w-6 h-6 mr-3" />
-                <span className="font-bold text-lg">License No. 1 – Legacy Since 1950s</span>
-              </div>
             </div>
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-2xl">
@@ -191,8 +185,74 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Content Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+                Advocate Ajay Shankar Sharma
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                75+ Years of Legal Tradition | 33+ Years of Experience
+              </p>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+              <p className="text-xl mb-8">
+                In the heart of Hapur lies a name synonymous with trust, tradition, and legal excellence — Advocate Ajay Shankar Sharma. With a family legacy dating back to the 1950s and over 33 years of personal experience, he stands as one of the most respected names in property legal services in the region.
+              </p>
+              
+              <p className="text-lg mb-8">
+                If you're seeking property-related legal assistance in Hapur, you're not just hiring a lawyer — you're connecting with three generations of legal wisdom and a name that carries a prestigious legacy.
+              </p>
+
+              <div className="bg-primary/5 rounded-xl p-8 mb-12">
+                <h3 className="text-2xl font-bold text-primary mb-6">🔹 A Legacy That Began in the 1950s</h3>
+                <p className="text-lg leading-relaxed mb-6">
+                  The journey of legal service for this family began over 75 years ago with Advocate Sharma's late father, who proudly held License No. 1 in Hapur. A pioneer in the region's legal field, he laid the foundation for a legal dynasty rooted in ethics, expertise, and client trust.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Alongside him, Advocate Sharma's late uncle also served with distinction, further solidifying the family's standing in the legal community. Today, Advocate Ajay Shankar Sharma proudly carries this heritage forward, providing a unique blend of traditional legal insight and modern digital convenience.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-8 mb-12">
+                <h3 className="text-2xl font-bold text-primary mb-6">🔹 Why Choose Advocate Ajay Shankar Sharma?</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>33+ Years of Experience in handling complex property matters</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>Hapur-based, regionally trusted advocate</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>Backed by a 75-year-old legal legacy</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>Offering online consultation and document services</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>Specializing in Sale Deed, Agreement to Sell, Will, Gift Deed, Power of Attorney</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold text-xl">✅</span>
+                    <span>Transparent, ethical, and client-focused approach</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Legacy Section with Family Photos */}
-      <section id="about" className="py-20 bg-background">
+      <section id="about" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -204,26 +264,27 @@ const Index = () => {
             </p>
           </div>
           
-          {/* Heritage Timeline with Larger Photos */}
+          {/* Heritage Timeline with Passport Size Photos */}
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="text-center">
-              <div className="w-52 h-52 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-red-700 shadow-xl">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                 <img 
                   src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
                   alt="Late Father - License No. 1 Holder" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">Late Father</h3>
-              <p className="text-muted-foreground text-lg">Founder of Legal Heritage</p>
+              <p className="text-muted-foreground text-lg">License No. 1 Holder</p>
+              <p className="text-muted-foreground">Founder of Legal Heritage</p>
             </div>
             
             <div className="text-center">
-              <div className="w-52 h-52 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-red-700 shadow-xl">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                 <img 
                   src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
                   alt="Late Uncle - Legal Family Heritage" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">Late Uncle</h3>
@@ -231,7 +292,7 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-52 h-52 mx-auto mb-6 rounded-xl overflow-hidden border-4 border-primary shadow-xl">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
                 <img 
                   src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
                   alt="Current Advocate" 
@@ -244,7 +305,7 @@ const Index = () => {
           </div>
 
           {/* Personal Touch Section */}
-          <div className="bg-muted/30 rounded-xl p-10">
+          <div className="bg-white rounded-xl p-10 shadow-lg">
             <div className="text-center">
               <h3 className="text-3xl font-bold text-primary mb-6">Three Generations of Trust - Serving from Hapur</h3>
               <p className="text-muted-foreground mb-8 text-xl leading-relaxed">
@@ -254,7 +315,7 @@ const Index = () => {
               <div className="flex justify-center items-center space-x-12">
                 <div className="flex items-center">
                   <Award className="w-6 h-6 text-red-700 mr-3" />
-                  <span className="text-lg font-semibold">License No. 1 Legacy</span>
+                  <span className="text-lg font-semibold">75+ Years Legacy</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-primary mr-3" />
@@ -262,133 +323,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced English Services Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Our Services ✨
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-5xl mx-auto mb-8 leading-relaxed">
-              We are committed to completing all your property and legal document related work in a simple, secure and trustworthy manner.
-            </p>
-            <p className="text-2xl font-bold text-primary">
-              Get comprehensive solutions in one place with Tiewalavakil! ✅
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Legal Documents Card */}
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
-              <CardContent className="p-8">
-                <FileText className="w-16 h-16 text-primary mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">📄 Legal Document Preparation & Registry Services</h3>
-                <ul className="text-base text-muted-foreground space-y-3 leading-relaxed">
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Sale Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Gift Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Mortgage Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Agreement to Sale — With/Without Possession</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Exchange Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Lease Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Will Testament</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Power of Attorney</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Adoption Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Trust Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Cancellation Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Correction Deed</li>
-                  <li className="flex items-start"><span className="text-primary font-bold mr-2">•</span> Marriage Registration</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Property Services Card */}
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/30">
-              <CardContent className="p-8">
-                <Search className="w-16 h-16 text-blue-600 mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">🏠 Property Document Services</h3>
-                <ul className="text-base text-muted-foreground space-y-4 leading-relaxed">
-                  <li className="flex items-start"><span className="text-blue-600 font-bold mr-2">•</span> Property Documents Verification</li>
-                  <li className="flex items-start"><span className="text-blue-600 font-bold mr-2">•</span> Property Documents Drafting</li>
-                  <li className="flex items-start"><span className="text-blue-600 font-bold mr-2">•</span> Property Documents Registration</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Special Services Card */}
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/30">
-              <CardContent className="p-8">
-                <Gavel className="w-16 h-16 text-red-600 mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-6">🔍 Other Special Services</h3>
-                <ul className="text-base text-muted-foreground space-y-4 leading-relaxed">
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Mutation / Name Transfer</li>
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Expert Resolution of Stamp Duty Cases</li>
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Legal Consultancy for Property Matters</li>
-                  <li className="flex items-start"><span className="text-red-600 font-bold mr-2">•</span> Online Legal Help & Documents Assistant</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-16">
-            <div className="bg-white rounded-xl p-8 shadow-xl max-w-4xl mx-auto border-2 border-primary/20">
-              <h4 className="text-2xl font-bold text-primary mb-6">
-                The only reliable solution for all your document needs — with Tiewalavakil.
-              </h4>
-              <div className="grid grid-cols-2 gap-6 text-lg text-muted-foreground">
-                <div className="flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">Accurate Process</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">Complete Documentation</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">Professional Advice</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-xl mr-2">✅</span>
-                  <span className="font-semibold">Reliability & Confidentiality Guarantee</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            Why Choose Us?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-red-700/30">
-              <CardContent className="p-8">
-                <BookOpen className="w-16 h-16 text-red-700 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-4">Generations of Trust</h3>
-                <p className="text-muted-foreground text-lg">Since 1950s</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
-              <CardContent className="p-8">
-                <Scale className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-4">Experienced Legal Practice</h3>
-                <p className="text-muted-foreground text-lg">Real courtroom & registry experience</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-600/30">
-              <CardContent className="p-8">
-                <Laptop className="w-16 h-16 text-blue-600 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-primary mb-4">Online Legal Help</h3>
-                <p className="text-muted-foreground text-lg">Serving from Hapur to all of India</p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -432,7 +366,7 @@ const Index = () => {
             </div>
             <div className="text-center">
               <div className="inline-block relative">
-                <div className="w-72 h-96 mx-auto rounded-xl overflow-hidden border-8 border-white shadow-2xl">
+                <div className="w-48 h-64 mx-auto rounded-xl overflow-hidden border-8 border-white shadow-2xl">
                   <img 
                     src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
                     alt="Advocate Ajay Shankar Sharma - Available for Online Consultation" 
@@ -560,7 +494,6 @@ const Index = () => {
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
                 <div className="text-lg">Hapur, Uttar Pradesh</div>
-                <div className="text-base font-bold text-red-400">License No. 1</div>
               </div>
             </div>
             <div>
@@ -588,7 +521,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s | License No. 1</p>
+            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
           </div>
         </div>
       </footer>
