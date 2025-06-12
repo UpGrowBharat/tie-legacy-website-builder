@@ -18,7 +18,7 @@ const Index = () => {
     { icon: FileText, title: "Will Drafting & Registration", desc: "Secure your family's future with proper will documentation" },
     { icon: Search, title: "Property Document Verification", desc: "Thorough verification of property documents" },
     { icon: FileText, title: "Mutation / Name Transfer", desc: "Transfer property ownership in revenue records" },
-    { icon: Receipt, title: "Stamp Duty Calculator", desc: "Calculate stamp duty requirements" },
+    { icon: Receipt, title: "Stamp Duty Calculator & Help", desc: "Calculate and manage stamp duty requirements" },
     { icon: Gavel, title: "Legal Consultation", desc: "Expert advice on title, ownership and property matters" }
   ];
 
@@ -315,7 +315,7 @@ const Index = () => {
               <div className="flex justify-center items-center space-x-12">
                 <div className="flex items-center">
                   <Award className="w-6 h-6 text-red-700 mr-3" />
-                  <span className="text-lg font-semibold">75+ Years Legacy</span>
+                  <span className="text-lg font-semibold">License No. 1 Legacy</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-primary mr-3" />
@@ -327,8 +327,134 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Our Services Section */}
       <section id="services" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Our Services ✨
+            </h2>
+            <p className="text-xl text-muted-foreground mb-4">
+              We are committed to completing all your property and legal document related work in a simple, secure and trustworthy manner.
+            </p>
+            <p className="text-xl font-bold text-primary">
+              Get comprehensive solutions in one place with Tiewalavakil! ✅
+            </p>
+          </div>
+
+          {/* Services Categories */}
+          <div className="space-y-16">
+            {/* Legal Document Preparation */}
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
+              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
+                <FileText className="w-8 h-8 mr-3" />
+                📄 Legal Document Preparation & Registry Services
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  "Sale Deed", "Gift Deed", "Mortgage Deed", "Agreement to Sale — With/Without Possession",
+                  "Exchange Deed", "Lease Deed", "Will Testament", "Power of Attorney", "Adoption Deed",
+                  "Trust Deed", "Cancellation Deed", "Correction Deed", "Marriage Registration"
+                ].map((service, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span className="text-muted-foreground font-medium">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Property Document Services */}
+            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8">
+              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
+                <Search className="w-8 h-8 mr-3" />
+                🏠 Property Document Services
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[
+                  "Property Documents Verification", "Property Documents Drafting", "Property Documents Registration"
+                ].map((service, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span className="text-muted-foreground font-medium">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Other Special Services */}
+            <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">
+              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
+                <Gavel className="w-8 h-8 mr-3" />
+                🔍 Other Special Services
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  "Mutation / Name Transfer", "Expert Resolution of Stamp Duty Cases",
+                  "Legal Consultancy for Property Matters", "Online Legal Help & Documents Assistant"
+                ].map((service, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span className="text-muted-foreground font-medium">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Service Guarantees */}
+          <div className="mt-16 bg-white rounded-xl p-8 shadow-lg">
+            <p className="text-center text-xl font-bold text-primary mb-8">
+              The only reliable solution for all your document needs — with Tiewalavakil.
+            </p>
+            <div className="grid md:grid-cols-4 gap-6">
+              {[
+                "Accurate Process", "Complete Documentation", "Professional Advice", "Reliability & Confidentiality Guarantee"
+              ].map((guarantee, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-green-600 font-bold text-2xl mb-2">✅</div>
+                  <p className="font-semibold text-primary">{guarantee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
+            Why Choose Us?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-8 text-center">
+                <Award className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h3 className="font-bold text-primary mb-4 text-xl">Generations of Trust</h3>
+                <p className="text-muted-foreground text-lg">Since 1950s</p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-8 text-center">
+                <Gavel className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h3 className="font-bold text-primary mb-4 text-xl">Experienced Legal Practice</h3>
+                <p className="text-muted-foreground text-lg">Real courtroom & registry experience</p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-8 text-center">
+                <Laptop className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h3 className="font-bold text-primary mb-4 text-xl">Online Legal Help</h3>
+                <p className="text-muted-foreground text-lg">Serving from Hapur to all of India</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Legal Services Grid */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
             Our Legal Services
