@@ -77,7 +77,7 @@ const Index = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
+            <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
             <a href="#consultation" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultation</a>
             <a href="#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQs</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
