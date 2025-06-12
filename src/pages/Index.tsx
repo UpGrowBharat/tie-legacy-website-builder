@@ -1,26 +1,85 @@
-import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User } from "lucide-react";
+
+import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User, Edit, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  const [adminUsername, setAdminUsername] = useState("");
+  const [adminPassword, setAdminPassword] = useState("");
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  const [news, setNews] = useState([
+    {
+      id: 1,
+      title: "New Online Consultation Services Available",
+      content: "We are now offering video consultation services for clients across India.",
+      date: "2024-06-10"
+    },
+    {
+      id: 2,
+      title: "Digital Document Verification Launched",
+      content: "Experience faster property document verification with our new digital process.",
+      date: "2024-06-08"
+    }
+  ]);
+  const [newNewsTitle, setNewNewsTitle] = useState("");
+  const [newNewsContent, setNewNewsContent] = useState("");
+  const [editingNews, setEditingNews] = useState<number | null>(null);
+  const { toast } = useToast();
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const services = [
-    { icon: FileText, title: "Sale Deed / Property Registry", desc: "Complete property registration with legal compliance" },
-    { icon: FileText, title: "Gift Deed", desc: "Transfer property as gift with proper documentation" },
-    { icon: FileText, title: "Agreement to Sell", desc: "Draft legally binding sale agreements" },
-    { icon: FileText, title: "Power of Attorney", desc: "General & specific POA drafting and registration" },
-    { icon: FileText, title: "Will Drafting & Registration", desc: "Secure your family's future with proper will documentation" },
-    { icon: Search, title: "Property Document Verification", desc: "Thorough verification of property documents" },
-    { icon: FileText, title: "Mutation / Name Transfer", desc: "Transfer property ownership in revenue records" },
-    { icon: Receipt, title: "Stamp Duty Calculator & Help", desc: "Calculate and manage stamp duty requirements" },
-    { icon: Gavel, title: "Legal Consultation", desc: "Expert advice on title, ownership and property matters" }
-  ];
+  const handleAdminLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (adminUsername === "admin" && adminPassword === "admin@1212") {
+      setIsAdminLoggedIn(true);
+      setShowAdminLogin(false);
+      toast({
+        title: "Login Successful",
+        description: "You can now manage news & updates.",
+      });
+    } else {
+      toast({
+        title: "Login Failed",
+        description: "Invalid credentials. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleAddNews = () => {
+    if (newNewsTitle && newNewsContent) {
+      const newNewsItem = {
+        id: Date.now(),
+        title: newNewsTitle,
+        content: newNewsContent,
+        date: new Date().toISOString().split('T')[0]
+      };
+      setNews([newNewsItem, ...news]);
+      setNewNewsTitle("");
+      setNewNewsContent("");
+      toast({
+        title: "News Added",
+        description: "New news item has been added successfully.",
+      });
+    }
+  };
+
+  const handleDeleteNews = (id: number) => {
+    setNews(news.filter(item => item.id !== id));
+    toast({
+      title: "News Deleted",
+      description: "News item has been deleted successfully.",
+    });
+  };
 
   const testimonials = [
     {
@@ -213,38 +272,8 @@ const Index = () => {
                   The journey of legal service for this family began over 75 years ago with Advocate Sharma's late father, who proudly held License No. 1 in Hapur. A pioneer in the region's legal field, he laid the foundation for a legal dynasty rooted in ethics, expertise, and client trust.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Alongside him, Advocate Sharma's late uncle also served with distinction, further solidifying the family's standing in the legal community. Today, Advocate Ajay Shankar Sharma proudly carries this heritage forward, providing a unique blend of traditional legal insight and modern digital convenience.
+                  Today, Advocate Ajay Shankar Sharma proudly carries this heritage forward, providing a unique blend of traditional legal insight and modern digital convenience.
                 </p>
-              </div>
-
-              <div className="bg-blue-50 rounded-xl p-8 mb-12">
-                <h3 className="text-2xl font-bold text-primary mb-6">🔹 Why Choose Advocate Ajay Shankar Sharma?</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>33+ Years of Experience in handling complex property matters</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>Hapur-based, regionally trusted advocate</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>Backed by a 75-year-old legal legacy</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>Offering online consultation and document services</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>Specializing in Sale Deed, Agreement to Sell, Will, Gift Deed, Power of Attorney</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <span className="text-green-600 font-bold text-xl">✅</span>
-                    <span>Transparent, ethical, and client-focused approach</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -327,145 +356,149 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Services Section */}
-      <section id="services" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Our Services ✨
-            </h2>
-            <p className="text-xl text-muted-foreground mb-4">
-              We are committed to completing all your property and legal document related work in a simple, secure and trustworthy manner.
-            </p>
-            <p className="text-xl font-bold text-primary">
-              Get comprehensive solutions in one place with Tiewalavakil! ✅
-            </p>
-          </div>
-
-          {/* Services Categories */}
-          <div className="space-y-16">
-            {/* Legal Document Preparation */}
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
-              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
-                <FileText className="w-8 h-8 mr-3" />
-                📄 Legal Document Preparation & Registry Services
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  "Sale Deed", "Gift Deed", "Mortgage Deed", "Agreement to Sale — With/Without Possession",
-                  "Exchange Deed", "Lease Deed", "Will Testament", "Power of Attorney", "Adoption Deed",
-                  "Trust Deed", "Cancellation Deed", "Correction Deed", "Marriage Registration"
-                ].map((service, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span className="text-muted-foreground font-medium">{service}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Property Document Services */}
-            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8">
-              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
-                <Search className="w-8 h-8 mr-3" />
-                🏠 Property Document Services
-              </h3>
-              <div className="grid md:grid-cols-3 gap-4">
-                {[
-                  "Property Documents Verification", "Property Documents Drafting", "Property Documents Registration"
-                ].map((service, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span className="text-muted-foreground font-medium">{service}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Other Special Services */}
-            <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">
-              <h3 className="text-3xl font-bold text-primary mb-8 flex items-center">
-                <Gavel className="w-8 h-8 mr-3" />
-                🔍 Other Special Services
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {[
-                  "Mutation / Name Transfer", "Expert Resolution of Stamp Duty Cases",
-                  "Legal Consultancy for Property Matters", "Online Legal Help & Documents Assistant"
-                ].map((service, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                    <span className="text-green-600 font-bold">•</span>
-                    <span className="text-muted-foreground font-medium">{service}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Service Guarantees */}
-          <div className="mt-16 bg-white rounded-xl p-8 shadow-lg">
-            <p className="text-center text-xl font-bold text-primary mb-8">
-              The only reliable solution for all your document needs — with Tiewalavakil.
-            </p>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                "Accurate Process", "Complete Documentation", "Professional Advice", "Reliability & Confidentiality Guarantee"
-              ].map((guarantee, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-green-600 font-bold text-2xl mb-2">✅</div>
-                  <p className="font-semibold text-primary">{guarantee}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            Why Choose Us?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
-              <CardContent className="p-8 text-center">
-                <Award className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="font-bold text-primary mb-4 text-xl">Generations of Trust</h3>
-                <p className="text-muted-foreground text-lg">Since 1950s</p>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
-              <CardContent className="p-8 text-center">
-                <Gavel className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="font-bold text-primary mb-4 text-xl">Experienced Legal Practice</h3>
-                <p className="text-muted-foreground text-lg">Real courtroom & registry experience</p>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
-              <CardContent className="p-8 text-center">
-                <Laptop className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="font-bold text-primary mb-4 text-xl">Online Legal Help</h3>
-                <p className="text-muted-foreground text-lg">Serving from Hapur to all of India</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Legal Services Grid */}
+      {/* News & Updates Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            Our Legal Services
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 group cursor-pointer border-2 hover:border-primary/30">
-                <CardContent className="p-8">
-                  <service.icon className="w-12 h-12 text-primary mb-6 group-hover:text-red-700 transition-colors" />
-                  <h3 className="font-bold text-primary mb-4 text-xl">{service.title}</h3>
-                  <p className="text-muted-foreground text-base leading-relaxed">{service.desc}</p>
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary">
+                News & Updates
+              </h2>
+              {!isAdminLoggedIn && (
+                <Button 
+                  onClick={() => setShowAdminLogin(!showAdminLogin)}
+                  variant="outline"
+                  size="sm"
+                  className="text-xs"
+                >
+                  <Edit className="w-4 h-4 mr-1" />
+                  Admin
+                </Button>
+              )}
+              {isAdminLoggedIn && (
+                <Button 
+                  onClick={() => setIsAdminLoggedIn(false)}
+                  variant="outline"
+                  size="sm"
+                  className="text-xs"
+                >
+                  Logout
+                </Button>
+              )}
+            </div>
+            <p className="text-xl text-muted-foreground">
+              Stay updated with our latest legal services and announcements
+            </p>
+          </div>
+
+          {/* Admin Login Form */}
+          {showAdminLogin && !isAdminLoggedIn && (
+            <div className="max-w-md mx-auto mb-12">
+              <Card className="border-2 border-primary/30">
+                <CardContent className="p-6">
+                  <form onSubmit={handleAdminLogin} className="space-y-4">
+                    <div>
+                      <Label htmlFor="admin-username">Username</Label>
+                      <Input
+                        id="admin-username"
+                        type="text"
+                        value={adminUsername}
+                        onChange={(e) => setAdminUsername(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="admin-password">Password</Label>
+                      <Input
+                        id="admin-password"
+                        type="password"
+                        value={adminPassword}
+                        onChange={(e) => setAdminPassword(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="flex space-x-2">
+                      <Button type="submit" className="flex-1">Login</Button>
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        onClick={() => setShowAdminLogin(false)}
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Admin Add News Form */}
+          {isAdminLoggedIn && (
+            <div className="max-w-2xl mx-auto mb-12">
+              <Card className="border-2 border-green-200 bg-green-50">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-4">Add New News/Update</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="news-title">Title</Label>
+                      <Input
+                        id="news-title"
+                        type="text"
+                        value={newNewsTitle}
+                        onChange={(e) => setNewNewsTitle(e.target.value)}
+                        placeholder="Enter news title"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="news-content">Content</Label>
+                      <Textarea
+                        id="news-content"
+                        value={newNewsContent}
+                        onChange={(e) => setNewNewsContent(e.target.value)}
+                        placeholder="Enter news content"
+                        rows={4}
+                      />
+                    </div>
+                    <Button onClick={handleAddNews} className="w-full">
+                      <Plus className="w-4 h-4 mr-2" />
+                      Add News
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* News Items */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            {news.map((item) => (
+              <Card key={item.id} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{item.content}</p>
+                    </div>
+                    {isAdminLoggedIn && (
+                      <Button
+                        onClick={() => handleDeleteNews(item.id)}
+                        variant="outline"
+                        size="sm"
+                        className="ml-4 text-red-600 hover:bg-red-50"
+                      >
+                        <X className="w-4 h-4" />
+                      </Button>
+                    )}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {new Date(item.date).toLocaleDateString('en-IN', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -625,7 +658,7 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-6 text-xl">Quick Links</h4>
               <div className="space-y-3 text-gray-300">
-                <div><a href="#services" className="hover:text-white transition-colors text-lg">Services</a></div>
+                <div><a href="/services" className="hover:text-white transition-colors text-lg">Services</a></div>
                 <div><a href="#about" className="hover:text-white transition-colors text-lg">About</a></div>
                 <div><a href="#faq" className="hover:text-white transition-colors text-lg">FAQ</a></div>
                 <div><a href="#consultation" className="hover:text-white transition-colors text-lg">Book Now</a></div>
