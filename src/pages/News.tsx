@@ -89,11 +89,11 @@ const News = () => {
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
-            <a href="/#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">About Us</a>
             <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
+            <a href="/book-consultant" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
             <a href="/news" className="text-primary font-bold">News & Updates</a>
-            <a href="/#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQs</a>
-            <a href="/#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
           </nav>
           <div className="flex items-center space-x-4">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
@@ -304,9 +304,9 @@ const News = () => {
               <h4 className="font-bold mb-6 text-xl">Quick Links</h4>
               <div className="space-y-3 text-gray-300">
                 <div><a href="/services" className="hover:text-white transition-colors text-lg">Services</a></div>
-                <div><a href="/#about" className="hover:text-white transition-colors text-lg">About</a></div>
+                <div><a href="/about" className="hover:text-white transition-colors text-lg">About Us</a></div>
                 <div><a href="/news" className="hover:text-white transition-colors text-lg">News & Updates</a></div>
-                <div><a href="/#consultation" className="hover:text-white transition-colors text-lg">Book Now</a></div>
+                <div><a href="/book-consultant" className="hover:text-white transition-colors text-lg">Book Consultant</a></div>
               </div>
             </div>
             <div>
