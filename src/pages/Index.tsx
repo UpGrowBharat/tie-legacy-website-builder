@@ -517,7 +517,7 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-xl">Connect</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mb-6">
                 <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
                   <span className="font-bold">f</span>
                 </div>
@@ -527,6 +527,18 @@ const Index = () => {
                 <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
                   <MessageCircle className="w-5 h-5" />
                 </div>
+              </div>
+              <div className="w-full h-24 bg-gray-700 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111194.67707710698!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf58c6ecedda7%3A0xd7cb8d8eebc75b1f!2sHapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="filter grayscale"
+                ></iframe>
               </div>
             </div>
           </div>
