@@ -123,7 +123,7 @@ const Index = () => {
         href="https://wa.me/917037455191"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300"
+        className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg transition-all duration-300"
       >
         <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
       </a>
@@ -135,7 +135,7 @@ const Index = () => {
             <div className="flex items-center space-x-3 xl:space-x-4 mb-4 xl:mb-5">
               <div className="w-14 h-16 xl:w-16 xl:h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                 <img 
-                  src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                   alt="Advocate Ajay Shankar Sharma" 
                   className="w-full h-full object-cover"
                 />
@@ -190,7 +190,7 @@ const Index = () => {
               <div className="rounded-lg overflow-hidden shadow-2xl">
                 <div className="w-full h-64 md:h-96 overflow-hidden">
                   <img 
-                    src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                    src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                     alt="Advocate Ajay Shankar Sharma - Current Legal Expert" 
                     className="w-full h-full object-cover"
                   />
@@ -284,7 +284,7 @@ const Index = () => {
             <div className="text-center">
               <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
                 <img 
-                  src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                   alt="Current Advocate" 
                   className="w-full h-full object-cover"
                 />
@@ -338,7 +338,7 @@ const Index = () => {
               <div className="inline-block relative">
                 <div className="w-40 h-48 md:w-48 md:h-64 mx-auto rounded-xl overflow-hidden border-4 md:border-8 border-white shadow-2xl">
                   <img 
-                    src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                    src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                     alt="Advocate Ajay Shankar Sharma - Available for Online Consultation" 
                     className="w-full h-full object-cover"
                   />
