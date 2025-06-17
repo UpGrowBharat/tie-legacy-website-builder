@@ -49,10 +49,18 @@ const Contact = () => {
               <a href="/contact" className="text-primary font-bold text-sm xl:text-base">Contact Us</a>
             </nav>
             <div className="flex items-center space-x-2 md:space-x-4">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                <span className="hidden sm:inline">Call: </span>7037455191
-              </Button>
+              <a href="tel:7037455191">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  <span className="hidden sm:inline">Call: </span>7037455191
+                </Button>
+              </a>
+              <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <MessageCircle className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  <span className="hidden sm:inline">WhatsApp</span>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -136,8 +144,15 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-lg md:text-xl font-bold text-primary">Office Location</h3>
-                        <p className="text-muted-foreground text-base md:text-lg">Hapur, Uttar Pradesh</p>
-                        <p className="text-xs md:text-sm text-muted-foreground">Visit us for in-person consultation</p>
+                        <a 
+                          href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground text-base md:text-lg hover:text-primary transition-colors hover:underline cursor-pointer"
+                        >
+                          Chamber no. 4, Tehsil Compound, Teacher Colony, Hapur, Uttar Pradesh 245101
+                        </a>
+                        <p className="text-xs md:text-sm text-muted-foreground">Click to view on Google Maps</p>
                       </div>
                     </div>
                   </CardContent>
@@ -150,15 +165,28 @@ const Contact = () => {
                   <div className="flex items-center space-x-3 md:space-x-4">
                     <div className="w-16 h-20 md:w-20 md:h-24 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                       <img 
-                        src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                        src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                         alt="Advocate Ajay Shankar Sharma" 
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-primary">Advocate Ajay Shankar Sharma</h3>
-                      <p className="text-sm md:text-base text-muted-foreground">33+ Years Experience</p>
-                      <p className="text-xs md:text-sm text-muted-foreground">Available for immediate consultation</p>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Advocate Ajay Shankar Sharma</h3>
+                      <p className="text-sm md:text-base text-muted-foreground mb-3">33+ Years Experience</p>
+                      <div className="flex flex-col sm:flex-row gap-2">
+                        <a href="tel:7037455191" className="flex-1">
+                          <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs">
+                            <Phone className="w-3 h-3 mr-2" />
+                            Call Now
+                          </Button>
+                        </a>
+                        <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer" className="flex-1">
+                          <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs">
+                            <MessageCircle className="w-3 h-3 mr-2" />
+                            Chat Now
+                          </Button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -297,14 +325,18 @@ const Contact = () => {
             Don't wait for legal issues to become complicated. Contact us today for expert legal advice and solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-              <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Call Now: 7037455191
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              WhatsApp Now
-            </Button>
+            <a href="tel:7037455191">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                Call Now: 7037455191
+              </Button>
+            </a>
+            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                WhatsApp Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -338,7 +370,16 @@ const Contact = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-base md:text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-base md:text-lg">Hapur, Uttar Pradesh</div>
+                <div className="text-base md:text-lg">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors hover:underline"
+                  >
+                    Chamber no. 4, Tehsil Compound, Teacher Colony, Hapur, Uttar Pradesh 245101
+                  </a>
+                </div>
               </div>
             </div>
             <div>
