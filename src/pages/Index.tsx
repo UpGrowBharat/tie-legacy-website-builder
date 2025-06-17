@@ -1,4 +1,3 @@
-
 import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User, Edit, Plus, X, Play, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -109,10 +108,12 @@ const Index = () => {
               <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
             </nav>
             <div className="flex items-center space-x-2 md:space-x-4">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                <span className="hidden sm:inline">Call: </span>7037455191
-              </Button>
+              <a href="tel:7037455191">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  <span className="hidden sm:inline">Call: </span>7037455191
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -151,14 +152,18 @@ const Index = () => {
               <p className="text-xs xl:text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
             </div>
             <div className="space-y-2 xl:space-y-3">
-              <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs xl:text-sm">
-                <Phone className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                Call Now
-              </Button>
-              <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs xl:text-sm">
-                <MessageCircle className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                WhatsApp Chat
-              </Button>
+              <a href="tel:7037455191">
+                <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs xl:text-sm">
+                  <Phone className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+              <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs xl:text-sm">
+                  <MessageCircle className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
+                  WhatsApp Chat
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>
@@ -180,10 +185,12 @@ const Index = () => {
                   <Scale className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                   Get Legal Help Now
                 </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-                  <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                  Call: 7037455191
-                </Button>
+                <a href="tel:7037455191">
+                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                    <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                    Call: 7037455191
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -329,10 +336,12 @@ const Index = () => {
                 Wherever you live – legal help is just one click away. Book consultation via phone, video call, or WhatsApp. 
                 Get verified documents without visiting our Hapur office.
               </p>
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                Call Advocate Now – 7037455191
-              </Button>
+              <a href="tel:7037455191">
+                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                  Call Advocate Now – 7037455191
+                </Button>
+              </a>
             </div>
             <div className="text-center">
               <div className="inline-block relative">
@@ -454,14 +463,18 @@ const Index = () => {
             Talk to a trusted legal expert in just 1 click.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-              <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Call Advocate Now – 7037455191
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              WhatsApp Consultation
-            </Button>
+            <a href="tel:7037455191">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                Call Advocate Now – 7037455191
+              </Button>
+            </a>
+            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                WhatsApp Consultation
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -522,25 +535,4 @@ const Index = () => {
               </div>
               <div className="w-full h-20 md:h-24 bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3498.123456789!2d77.7758056!3d28.7302778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQzJzQ5LjAiTiA3N8KwNDYnMzIuOSJF!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="filter grayscale"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-gray-400">
-            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3498.123456789!2d77.7758056!3d28.7302778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768
