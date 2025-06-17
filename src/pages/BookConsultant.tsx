@@ -100,7 +100,7 @@ const BookConsultant = () => {
             <div className="flex justify-center">
               <div className="w-48 h-64 rounded-xl overflow-hidden border-4 border-primary shadow-2xl">
                 <img 
-                  src="/lovable-uploads/4569ed3b-2914-4778-b1e3-74d53431dabe.png" 
+                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
                   alt="Advocate Ajay Shankar Sharma" 
                   className="w-full h-full object-cover"
                 />
@@ -308,11 +308,11 @@ const BookConsultant = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Hapur, Uttar Pradesh</div>
+                <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur - 245101</div>
                 <div className="mt-4">
                   <div className="w-full h-24 bg-gray-700 rounded-lg overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111194.67707710698!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf58c6ecedda7%3A0xd7cb8d8eebc75b1f!2sHapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.234567890123!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQzJzQ0LjAiTiA3N8KwNDUnNDIuMCJF!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
