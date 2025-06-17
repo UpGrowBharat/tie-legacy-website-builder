@@ -260,11 +260,11 @@ const Index = () => {
               <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                 <img 
                   src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
-                  alt="Nagendra Dutt Sharma - License No. 1 Holder" 
+                  alt="Late Shri Nagendra Dutt Sharma - License No. 1 Holder" 
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Nagendra Dutt Sharma</h3>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
               <p className="text-base md:text-lg text-muted-foreground">License No. 1 Holder</p>
               <p className="text-sm md:text-base text-muted-foreground">Founder of Legal Heritage</p>
             </div>
@@ -272,12 +272,12 @@ const Index = () => {
             <div className="text-center">
               <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                 <img 
-                  src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
-                  alt="Narottam Dutt Sharma - Legal Family Heritage" 
+                  src="/lovable-uploads/39b7aae8-0209-4926-8db2-d52354527704.png" 
+                  alt="Late Shri Narottam Dutt Sharma - Legal Family Heritage" 
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Narottam Dutt Sharma</h3>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
               <p className="text-base md:text-lg text-muted-foreground">Family Legal Tradition</p>
             </div>
 
@@ -510,19 +510,19 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-6 text-lg md:text-xl">Connect</h4>
               <div className="flex space-x-4 mb-6">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer transition-colors">
                   <span className="font-bold text-sm md:text-base">f</span>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer transition-colors">
                   <span className="font-bold text-sm md:text-base">in</span>
                 </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer transition-colors">
                   <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
               </div>
               <div className="w-full h-20 md:h-24 bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111194.67707710698!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf58c6ecedda7%3A0xd7cb8d8eebc75b1f!2sHapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3498.123456789!2d77.7758056!3d28.7302778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQzJzQ5LjAiTiA3N8KwNDYnMzIuOSJF!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
