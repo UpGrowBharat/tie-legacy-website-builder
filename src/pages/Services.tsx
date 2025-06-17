@@ -1,3 +1,4 @@
+
 import { Phone, MessageCircle, Scale, FileText, Receipt, Search, Gavel, Award, Users, MapPin, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,24 +49,16 @@ const Services = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
             <a href="/services" className="text-primary font-bold">Services</a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="/book-consultant" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultation</a>
-            <a href="/news" className="text-foreground hover:text-primary transition-colors font-medium">News</a>
-            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
+            <a href="/#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+            <a href="/#consultation" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultation</a>
+            <a href="/#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQs</a>
+            <a href="/#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <a href="tel:7037455191">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                <Phone className="w-4 h-4 mr-2" />
-                Call: 7037455191
-              </Button>
-            </a>
-            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-green-500 text-green-600 hover:bg-green-50 font-semibold">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
-              </Button>
-            </a>
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+              <Phone className="w-4 h-4 mr-2" />
+              Call: 7037455191
+            </Button>
           </div>
         </div>
       </header>
@@ -194,14 +187,7 @@ const Services = () => {
                   <div className="text-center">
                     <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                     <p className="font-bold">Office Location</p>
-                    <a 
-                      href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-lg hover:text-primary transition-colors hover:underline cursor-pointer"
-                    >
-                      Chamber no. 4, Tehsil Compound, Teacher Colony, Hapur, Uttar Pradesh 245101
-                    </a>
+                    <p className="text-lg">Hapur, Uttar Pradesh</p>
                   </div>
                   <div className="text-center">
                     <Users className="w-8 h-8 text-primary mx-auto mb-2" />
@@ -236,18 +222,14 @@ const Services = () => {
             Contact Advocate Ajay Shankar Sharma today for expert legal assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="tel:7037455191">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now – 7037455191
-              </Button>
-            </a>
-            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Consultation
-              </Button>
-            </a>
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now – 7037455191
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp Consultation
+            </Button>
           </div>
         </div>
       </section>
@@ -281,16 +263,7 @@ const Services = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors hover:underline"
-                  >
-                    Chamber no. 4, Tehsil Compound, Teacher Colony, Hapur, Uttar Pradesh 245101
-                  </a>
-                </div>
+                <div className="text-lg">Hapur, Uttar Pradesh</div>
               </div>
             </div>
             <div>
@@ -298,8 +271,8 @@ const Services = () => {
               <div className="space-y-3 text-gray-300">
                 <div><a href="/" className="hover:text-white transition-colors text-lg">Home</a></div>
                 <div><a href="/services" className="hover:text-white transition-colors text-lg">Services</a></div>
-                <div><a href="/about" className="hover:text-white transition-colors text-lg">About</a></div>
-                <div><a href="/book-consultant" className="hover:text-white transition-colors text-lg">Book Now</a></div>
+                <div><a href="/#about" className="hover:text-white transition-colors text-lg">About</a></div>
+                <div><a href="/#consultation" className="hover:text-white transition-colors text-lg">Book Now</a></div>
               </div>
             </div>
             <div>
