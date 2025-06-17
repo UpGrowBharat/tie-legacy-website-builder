@@ -25,10 +25,12 @@ const About = () => {
             <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-              <Phone className="w-4 h-4 mr-2" />
-              Call: 7037455191
-            </Button>
+            <a href="tel:7037455191">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+                <Phone className="w-4 h-4 mr-2" />
+                Call: 7037455191
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -55,12 +57,12 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Story</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="text-lg">
-                  The legacy of Tiewala Vakil began in the 1950s when Narendar Dutt Sharma, holder of License No. 1 in Hapur, 
+                  The legacy of Tiewala Vakil began in the 1950s when Late Shri Nagendra Dutt Sharma, holder of License No. 1 in Hapur, 
                   established a foundation of legal excellence that would span generations. His pioneering spirit in the legal 
                   field set the groundwork for what would become one of the most trusted names in property law.
                 </p>
                 <p className="text-lg">
-                  Following this tradition, Narottam Dutt Sharma continued the family's commitment to legal service, 
+                  Following this tradition, Late Shri Narottam Dutt Sharma continued the family's commitment to legal service, 
                   further strengthening the bond of trust with the community and expanding the scope of legal assistance.
                 </p>
                 <p className="text-lg">
@@ -95,11 +97,11 @@ const About = () => {
                 <div className="w-32 h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                   <img 
                     src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
-                    alt="Narendar Dutt Sharma" 
+                    alt="Late Shri Nagendra Dutt Sharma" 
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Narendar Dutt Sharma</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
                 <p className="text-muted-foreground mb-2">License No. 1 Holder</p>
                 <p className="text-sm text-muted-foreground">Founded the legal practice in 1950s, establishing the foundation of trust and excellence in Hapur's legal community.</p>
               </CardContent>
@@ -109,12 +111,12 @@ const About = () => {
               <CardContent className="p-6">
                 <div className="w-32 h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
                   <img 
-                    src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
-                    alt="Narottam Dutt Sharma" 
+                    src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
+                    alt="Late Shri Narottam Dutt Sharma" 
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Narottam Dutt Sharma</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
                 <p className="text-muted-foreground mb-2">Second Generation</p>
                 <p className="text-sm text-muted-foreground">Continued the family tradition, expanding legal services and strengthening community relationships.</p>
               </CardContent>
@@ -255,14 +257,18 @@ const About = () => {
             Get expert legal assistance from Hapur's most experienced advocate.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now: 7037455191
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp Consultation
-            </Button>
+            <a href="tel:7037455191">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: 7037455191
+              </Button>
+            </a>
+            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp Consultation
+              </Button>
+            </a>
           </div>
         </div>
       </section>
