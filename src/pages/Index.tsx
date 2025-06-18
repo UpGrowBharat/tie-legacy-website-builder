@@ -41,7 +41,7 @@ const videoTestimonials = [
     id: 1,
     name: "Rajesh Kumar",
     title: "Property Registration Client",
-    thumbnail: "/lovable-uploads/gallery1.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     videoUrl: "#",
     feedback: "Amazing service! Got my property registered without any hassle."
   },
@@ -49,7 +49,7 @@ const videoTestimonials = [
     id: 2,
     name: "Priya Sharma",
     title: "Legal Consultation Client",
-    thumbnail: "/lovable-uploads/gallery2.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     videoUrl: "#",
     feedback: "Expert advice that saved me from a major property dispute."
   },
@@ -57,7 +57,7 @@ const videoTestimonials = [
     id: 3,
     name: "Amit Singh",
     title: "Documentation Service Client",
-    thumbnail: "/lovable-uploads/gallery3.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     videoUrl: "#",
     feedback: "Professional documentation service with complete transparency."
   }
@@ -82,10 +82,10 @@ const faqs = [
 ];
 
 const galleryItems = [
-  "/lovable-uploads/gallery1.jpg",
-  "/lovable-uploads/gallery2.jpg",
-  "/lovable-uploads/gallery3.jpg",
-  "/lovable-uploads/gallery4.jpg",
+  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",  
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
 ];
 
 const Index = () => {
@@ -111,7 +111,7 @@ const Index = () => {
               />
             </div>
             <nav className="hidden lg:flex space-x-6 xl:space-x-8">
-              <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
+              <a href="/" className="text-sm xl:text-base text-primary font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
@@ -222,7 +222,7 @@ const Index = () => {
             </div>
             <div>
               <img 
-                src="/lovable-uploads/hero-image.png" 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                 alt="Legal Consultation" 
                 className="w-full rounded-xl shadow-lg"
               />
@@ -552,7 +552,7 @@ const Index = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur - 245101</div>
+                <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur -  245101</div>
                 <div className="mt-4">
                   <a 
                     href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh"
