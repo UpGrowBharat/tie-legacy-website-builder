@@ -41,7 +41,7 @@ const videoTestimonials = [
     id: 1,
     name: "Rajesh Kumar",
     title: "Property Registration Client",
-    thumbnail: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/lovable-uploads/ed62dcfa-e067-48b4-a735-809bf4e22ca3.png",
     videoUrl: "#",
     feedback: "Amazing service! Got my property registered without any hassle."
   },
@@ -49,7 +49,7 @@ const videoTestimonials = [
     id: 2,
     name: "Priya Sharma",
     title: "Legal Consultation Client",
-    thumbnail: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/lovable-uploads/57a4ba6d-7415-4972-8289-a35cf3235bc0.png",
     videoUrl: "#",
     feedback: "Expert advice that saved me from a major property dispute."
   },
@@ -57,7 +57,7 @@ const videoTestimonials = [
     id: 3,
     name: "Amit Singh",
     title: "Documentation Service Client",
-    thumbnail: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/lovable-uploads/1cc35620-26d7-4431-b074-a1cd1b3bd2b0.png",
     videoUrl: "#",
     feedback: "Professional documentation service with complete transparency."
   }
@@ -82,10 +82,10 @@ const faqs = [
 ];
 
 const galleryItems = [
-  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",  
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "/lovable-uploads/2561dbe8-f8bd-4677-9fc9-e1cc79f71abe.png",
+  "/lovable-uploads/315b4579-da29-4b6d-931b-adccdbf5ccee.png",
+  "/lovable-uploads/66396184-1e67-4743-938c-cd5ecac431d9.png",
+  "/lovable-uploads/4208548e-51c4-49ee-b64b-672b210b1a4f.png",
 ];
 
 const Index = () => {
@@ -168,7 +168,7 @@ const Index = () => {
               <div className="flex items-center space-x-3 xl:space-x-4 mb-4 xl:mb-5">
                 <div className="w-14 h-16 xl:w-16 xl:h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                   <img 
-                    src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                    src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                     alt="Advocate Ajay Shankar Sharma" 
                     className="w-full h-full object-cover"
                   />
@@ -220,12 +220,20 @@ const Index = () => {
                 </Button>
               </a>
             </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                alt="Legal Consultation" 
-                className="w-full rounded-xl shadow-lg"
-              />
+            <div className="flex justify-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
+                  alt="Advocate Ajay Shankar Sharma - Professional Legal Services" 
+                  className="w-full max-w-md rounded-xl shadow-2xl border-4 border-white"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-lg shadow-lg">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">33+</div>
+                    <div className="text-sm">Years Experience</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -365,9 +373,9 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <img 
-                src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                 alt="Advocate Ajay Shankar Sharma" 
-                className="rounded-xl shadow-lg w-64 md:w-80"
+                className="rounded-xl shadow-lg w-64 md:w-80 border-4 border-white/20"
               />
             </div>
           </div>
@@ -448,7 +456,7 @@ const Index = () => {
       <section className="py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Client Video Testimonials
+            Client Consultation Sessions
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {videoTestimonials.map((video) => (
@@ -456,13 +464,16 @@ const Index = () => {
                 <div className="relative">
                   <img 
                     src={video.thumbnail} 
-                    alt={`${video.name} testimonial`}
+                    alt={`${video.name} consultation session`}
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <button className="bg-white/90 rounded-full p-4 hover:bg-white transition-colors">
+                    <div className="bg-white/90 rounded-full p-4 hover:bg-white transition-colors cursor-pointer">
                       <Play className="w-6 h-6 text-primary" />
-                    </button>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                    Live Session
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -480,14 +491,23 @@ const Index = () => {
       <section className="py-8 md:py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Gallery
+            Our Office & Services Gallery
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryItems.map((src, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
+              <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <img 
+                  src={src} 
+                  alt={`Office consultation session ${index + 1}`} 
+                  className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300 group-hover:brightness-110" 
+                />
               </div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground text-lg">
+              Professional legal consultations and documentation services at our Hapur office
+            </p>
           </div>
         </div>
       </section>

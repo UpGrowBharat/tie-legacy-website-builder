@@ -1,3 +1,4 @@
+
 import { Scale, Award, Users, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -85,7 +86,7 @@ const About = () => {
             <Card className="text-center p-6">
               <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
                 <img 
-                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                  src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                   alt="Advocate Ajay Shankar Sharma" 
                   className="w-full h-full object-cover"
                 />
@@ -167,9 +168,9 @@ const About = () => {
             </div>
             <div className="text-center">
               <img 
-                src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                 alt="Advocate Ajay Shankar Sharma" 
-                className="w-80 mx-auto rounded-xl shadow-lg"
+                className="w-80 mx-auto rounded-xl shadow-lg border-4 border-primary/20"
               />
             </div>
           </div>
