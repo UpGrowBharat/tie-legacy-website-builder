@@ -1,5 +1,5 @@
 
-import { Phone, MessageCircle, Scale, Award, MapPin, Users, BookOpen, Clock } from "lucide-react";
+import { Scale, Award, Users, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -8,265 +8,194 @@ const About = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-              alt="Tiewala Vakil Logo" 
-              className="h-24 w-auto"
-            />
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
-            <a href="/about" className="text-primary font-bold">About Us</a>
-            <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
-            <a href="/book-consultant" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
-            <a href="/news" className="text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
-            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <a href="tel:7037455191">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                <Phone className="w-4 h-4 mr-2" />
-                Call: 7037455191
-              </Button>
-            </a>
+        <div className="container mx-auto px-4 py-2 md:py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <img 
+                src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
+                alt="Tiewala Vakil Logo" 
+                className="h-16 md:h-24 w-auto"
+              />
+            </div>
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+              <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
+              <a href="/about" className="text-sm xl:text-base text-primary font-medium">About Us</a>
+              <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
+              <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
+              <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
+              <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
+            </nav>
+            <div className="flex items-center space-x-2 md:space-x-4">
+              <a href="tel:7037455191">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  <span className="hidden sm:inline">Call: </span>7037455191
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* About Us Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-              About Tiewala Vakil
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Discover the legacy of trust, tradition, and legal excellence that spans over 75 years in Hapur
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Story Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Story</h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p className="text-lg">
-                  The legacy of Tiewala Vakil began in the 1950s when Late Shri Nagendra Dutt Sharma, holder of License No. 1 in Hapur, 
-                  established a foundation of legal excellence that would span generations. His pioneering spirit in the legal 
-                  field set the groundwork for what would become one of the most trusted names in property law.
-                </p>
-                <p className="text-lg">
-                  Following this tradition, Late Shri Narottam Dutt Sharma continued the family's commitment to legal service, 
-                  further strengthening the bond of trust with the community and expanding the scope of legal assistance.
-                </p>
-                <p className="text-lg">
-                  Today, Advocate Ajay Shankar Sharma carries forward this rich heritage with over 33 years of personal 
-                  experience, combining traditional legal wisdom with modern digital convenience to serve clients 
-                  across India from our base in Hapur.
-                </p>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/lovable-uploads/4569ed3b-2914-4778-b1e3-74d53431dabe.png" 
-                  alt="Advocate Ajay Shankar Sharma" 
-                  className="w-full h-96 object-cover"
-                />
-              </div>
-            </div>
-          </div>
+      {/* Hero Section */}
+      <section className="py-12 md:py-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
+            About Our Legal Heritage
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Three generations of legal excellence serving property law needs with dedication and expertise
+          </p>
         </div>
       </section>
 
       {/* Legacy Timeline */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Three Generations of Legal Excellence
+            Our Legal Heritage
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="w-32 h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
-                  <img 
-                    src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
-                    alt="Late Shri Nagendra Dutt Sharma" 
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
-                <p className="text-muted-foreground mb-2">License No. 1 Holder</p>
-                <p className="text-sm text-muted-foreground">Founded the legal practice in 1950s, establishing the foundation of trust and excellence in Hapur's legal community.</p>
-              </CardContent>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="text-center p-6">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
+                <img 
+                  src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
+                  alt="Late Shri Nagendra Dutt Sharma" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
+              <p className="text-lg text-muted-foreground mb-2">License No. 1 Holder</p>
+              <p className="text-muted-foreground">Founder of our legal heritage, establishing the foundation of trust and expertise that continues today.</p>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="w-32 h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
-                  <img 
-                    src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
-                    alt="Late Shri Narottam Dutt Sharma" 
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
-                <p className="text-muted-foreground mb-2">Second Generation</p>
-                <p className="text-sm text-muted-foreground">Continued the family tradition, expanding legal services and strengthening community relationships.</p>
-              </CardContent>
+            <Card className="text-center p-6">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
+                <img 
+                  src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
+                  alt="Late Shri Narottam Dutt Sharma" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
+              <p className="text-lg text-muted-foreground mb-2">Second Generation</p>
+              <p className="text-muted-foreground">Continued the family tradition of legal excellence, expanding our expertise in property law.</p>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 border-2 border-primary">
-              <CardContent className="p-6">
-                <div className="w-32 h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
-                  <img 
-                    src="/lovable-uploads/4569ed3b-2914-4778-b1e3-74d53431dabe.png" 
-                    alt="Advocate Ajay Shankar Sharma" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Advocate Ajay Shankar Sharma</h3>
-                <p className="text-muted-foreground mb-2">Current Legal Expert</p>
-                <p className="text-sm text-muted-foreground">Leading the practice with 33+ years of experience, combining tradition with modern digital services.</p>
-              </CardContent>
+            <Card className="text-center p-6">
+              <div className="w-32 h-40 mx-auto mb-6 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
+                <img 
+                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                  alt="Advocate Ajay Shankar Sharma" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-2">Advocate Ajay Shankar Sharma</h3>
+              <p className="text-lg text-muted-foreground mb-2">Current Legal Expert</p>
+              <p className="text-muted-foreground">Leading the third generation with 33+ years of experience, combining traditional expertise with modern solutions.</p>
             </Card>
           </div>
         </div>
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-background">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Our Core Values
+            Our Values & Expertise
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <Scale className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Integrity</h3>
-                <p className="text-muted-foreground">Upholding the highest ethical standards in all our legal practices and client relationships.</p>
-              </CardContent>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 text-center">
+              <Scale className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">Legal Excellence</h3>
+              <p className="text-muted-foreground">
+                Over 75 years of combined legal expertise in property law, documentation, and consultation services.
+              </p>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Excellence</h3>
-                <p className="text-muted-foreground">Delivering superior legal services with attention to detail and comprehensive solutions.</p>
-              </CardContent>
+            <Card className="p-6 text-center">
+              <Award className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">Trusted Heritage</h3>
+              <p className="text-muted-foreground">
+                Three generations of legal professionals serving clients with dedication, integrity, and professional excellence.
+              </p>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Trust</h3>
-                <p className="text-muted-foreground">Building lasting relationships based on transparency, reliability, and consistent results.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <BookOpen className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Innovation</h3>
-                <p className="text-muted-foreground">Embracing modern technology to provide convenient and accessible legal services.</p>
-              </CardContent>
+            <Card className="p-6 text-center">
+              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">Client Focus</h3>
+              <p className="text-muted-foreground">
+                Personalized legal solutions tailored to each client's unique property needs and circumstances.
+              </p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 bg-muted/30">
+      {/* Current Practice */}
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Why Choose Tiewala Vakil?
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">75+ Years of Heritage</h3>
-                    <p className="text-muted-foreground">Three generations of legal expertise serving the community with unwavering dedication.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">Local Expertise, National Reach</h3>
-                    <p className="text-muted-foreground">Based in Hapur with deep local knowledge, serving clients across India through digital platforms.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Scale className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">Comprehensive Legal Solutions</h3>
-                    <p className="text-muted-foreground">From property registration to legal consultations, we handle all your legal needs under one roof.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">24/7 Accessibility</h3>
-                    <p className="text-muted-foreground">Get legal assistance through phone, video calls, and WhatsApp whenever you need it.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Award className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">Proven Track Record</h3>
-                    <p className="text-muted-foreground">Thousands of satisfied clients and successfully completed legal cases speak for our expertise.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Users className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">Personalized Service</h3>
-                    <p className="text-muted-foreground">Every client receives individual attention and customized legal solutions for their specific needs.</p>
-                  </div>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                Modern Legal Solutions
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Today, Advocate Ajay Shankar Sharma continues the family tradition from our Hapur office, 
+                combining decades of legal expertise with modern technology to provide comprehensive 
+                property legal services.
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  33+ years of active legal practice
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  Specialized in property law and documentation
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  Online and offline consultation services
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  Transparent pricing and professional service
+                </li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <img 
+                src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                alt="Advocate Ajay Shankar Sharma" 
+                className="w-80 mx-auto rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* Contact Section */}
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Experience Our Legacy of Trust?
+            Ready to Get Legal Assistance?
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join thousands of satisfied clients who have trusted us with their legal needs. 
-            Get expert legal assistance from Hapur's most experienced advocate.
+          <p className="text-lg mb-8 max-w-2xl mx-auto">
+            Contact us today for expert property legal consultation and documentation services
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="tel:7037455191">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-lg font-semibold px-8 py-4">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: 7037455191
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="/book-consultant">
+              <Button size="lg" variant="secondary" className="font-semibold px-8 py-4">
+                Book Consultation
               </Button>
             </a>
-            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg font-semibold px-8 py-4">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Consultation
+            <a href="tel:7037455191">
+              <Button size="lg" variant="outline" className="font-semibold px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
             </a>
           </div>
@@ -302,20 +231,19 @@ const About = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Hapur, Uttar Pradesh</div>
+                <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur - 245101</div>
                 <div className="mt-4">
-                  <div className="w-full h-24 bg-gray-700 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111194.67707710698!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf58c6ecedda7%3A0xd7cb8d8eebc75b1f!2sHapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="filter grayscale"
-                    ></iframe>
-                  </div>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full h-24 bg-gray-700 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors"
+                  >
+                    <div className="w-full h-full flex items-center justify-center text-white">
+                      <MapPin className="w-6 h-6 mr-2" />
+                      <span>View on Google Maps</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -337,9 +265,11 @@ const About = () => {
                 <div className="w-10 h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
                   <span className="font-bold">in</span>
                 </div>
-                <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
+                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+                  <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User, Edit, Plus, X, Play, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,6 +34,33 @@ const testimonials = [
       "Very responsive and clear in communication. The consultation was worth every penny.",
     rating: 4,
   },
+];
+
+const videoTestimonials = [
+  {
+    id: 1,
+    name: "Rajesh Kumar",
+    title: "Property Registration Client",
+    thumbnail: "/lovable-uploads/gallery1.jpg",
+    videoUrl: "#",
+    feedback: "Amazing service! Got my property registered without any hassle."
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    title: "Legal Consultation Client",
+    thumbnail: "/lovable-uploads/gallery2.jpg",
+    videoUrl: "#",
+    feedback: "Expert advice that saved me from a major property dispute."
+  },
+  {
+    id: 3,
+    name: "Amit Singh",
+    title: "Documentation Service Client",
+    thumbnail: "/lovable-uploads/gallery3.jpg",
+    videoUrl: "#",
+    feedback: "Professional documentation service with complete transparency."
+  }
 ];
 
 const faqs = [
@@ -83,7 +111,7 @@ const Index = () => {
               />
             </div>
             <nav className="hidden lg:flex space-x-6 xl:space-x-8">
-              <a href="#home" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
+              <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
@@ -102,14 +130,14 @@ const Index = () => {
         </div>
       </header>
 
-      {/* WhatsApp Float Button */}
+      {/* WhatsApp Float Button - Always Visible */}
       <a
         href="https://wa.me/917037455191"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 text-sm font-semibold"
+        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 text-sm font-semibold flex items-center"
       >
-        <MessageCircle className="w-4 h-4 mr-2 inline" />
+        <MessageCircle className="w-4 h-4 mr-2" />
         WhatsApp Consultation
       </a>
 
@@ -117,9 +145,8 @@ const Index = () => {
       <div className="fixed left-4 md:left-6 bottom-4 md:bottom-6 z-40">
         <Button
           onClick={() => setShowContact(!showContact)}
-          className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm px-4 py-3 rounded-full shadow-lg"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm px-4 py-2 rounded-lg shadow-lg"
         >
-          <User className="w-4 h-4 mr-2" />
           Contact
         </Button>
 
@@ -252,7 +279,6 @@ const Index = () => {
             </p>
           </div>
           
-          {/* Heritage Timeline with Passport Size Photos */}
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-10">
             <div className="text-center">
               <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
@@ -292,7 +318,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Personal Touch Section */}
           <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">Three Generations of Trust - Serving from Hapur</h3>
@@ -393,38 +418,74 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             What Our Clients Say
           </h2>
-          <Carousel>
-            <CarouselContent className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent className="-ml-1">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="p-4">
-                  <Card className="h-full shadow-lg">
-                    <CardContent>
-                      <Star className="w-6 h-6 text-yellow-400 mb-2" />
-                      <p className="text-muted-foreground mb-4">"{testimonial.feedback}"</p>
-                      <p className="font-semibold text-primary">{testimonial.name}</p>
-                    </CardContent>
-                  </Card>
+                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full shadow-lg">
+                      <CardContent className="p-6">
+                        <div className="flex mb-2">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <p className="text-muted-foreground mb-4">"{testimonial.feedback}"</p>
+                        <p className="font-semibold text-primary">{testimonial.name}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-4 space-x-4">
-              <CarouselPrevious className="cursor-pointer" />
-              <CarouselNext className="cursor-pointer" />
-            </div>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Video Testimonials Section */}
       <section className="py-8 md:py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
+            Client Video Testimonials
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {videoTestimonials.map((video) => (
+              <Card key={video.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="relative">
+                  <img 
+                    src={video.thumbnail} 
+                    alt={`${video.name} testimonial`}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <button className="bg-white/90 rounded-full p-4 hover:bg-white transition-colors">
+                      <Play className="w-6 h-6 text-primary" />
+                    </button>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-lg text-primary mb-1">{video.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{video.title}</p>
+                  <p className="text-muted-foreground text-sm">"{video.feedback}"</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-8 md:py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             Gallery
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryItems.map((src, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-                <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-40 object-cover" />
+              <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
               </div>
             ))}
           </div>
@@ -432,17 +493,17 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
+      <section className="py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-300 rounded-lg">
+              <div key={index} className="border border-gray-300 rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center p-4 text-left font-semibold text-primary focus:outline-none"
+                  className="w-full flex justify-between items-center p-4 text-left font-semibold text-primary focus:outline-none hover:bg-gray-50 transition-colors"
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
@@ -452,7 +513,7 @@ const Index = () => {
                   />
                 </button>
                 {openFAQ === index && (
-                  <div className="p-4 text-muted-foreground border-t border-gray-300">
+                  <div className="p-4 text-muted-foreground border-t border-gray-300 bg-gray-50">
                     {faq.answer}
                   </div>
                 )}
@@ -493,18 +554,17 @@ const Index = () => {
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
                 <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur - 245101</div>
                 <div className="mt-4">
-                  <div className="w-full h-24 bg-gray-700 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.234567890123!2d77.7616!3d28.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQzJzQ0LjAiTiA3N8KwNDUnNDIuMCJF!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="filter grayscale"
-                    ></iframe>
-                  </div>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full h-24 bg-gray-700 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors"
+                  >
+                    <div className="w-full h-full flex items-center justify-center text-white">
+                      <MapPin className="w-6 h-6 mr-2" />
+                      <span>View on Google Maps</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -526,9 +586,11 @@ const Index = () => {
                 <div className="w-10 h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
                   <span className="font-bold">in</span>
                 </div>
-                <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
+                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+                  <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
