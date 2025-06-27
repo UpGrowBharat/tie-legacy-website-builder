@@ -1,3 +1,4 @@
+
 import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User, Edit, Plus, X, Play, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -415,111 +416,6 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Latest Legal Insights & Guides
-          </h2>
-          
-          {/* Blog Post Card */}
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-              {/* Blog Banner */}
-              <div className="relative h-64 md:h-80 bg-gradient-to-r from-primary to-blue-600">
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="relative z-10 h-full flex items-center justify-center text-center p-6">
-                  <div>
-                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
-                      विक्रय पत्र (Sale Deed)
-                    </h3>
-                    <p className="text-lg md:text-xl text-white/90 max-w-2xl">
-                      A Complete Guide for Property Buyers and Sellers in Hapur
-                    </p>
-                    <div className="mt-4 inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <span className="text-white font-semibold">Property Law Guide</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <CardContent className="p-6 md:p-8">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    A विक्रय पत्र (Sale Deed) is one of the most important legal documents involved in the process of buying or selling property in India. Whether you're purchasing a plot, flat, house, or agricultural land, a Sale Deed is the final agreement that legally transfers ownership from the seller to the buyer.
-                  </p>
-
-                  <div className="bg-primary/5 rounded-lg p-6 mb-6">
-                    <h4 className="text-xl font-bold text-primary mb-3">What is a Sale Deed (विक्रय पत्र)?</h4>
-                    <p className="text-muted-foreground">
-                      A Sale Deed, also known as Vikray Patra, is a legal document that confirms the sale and transfer of ownership of property. It is executed between the seller (transferor) and the buyer (transferee) and must be signed by both parties and registered at the Sub-Registrar Office to be legally valid.
-                    </p>
-                  </div>
-
-                  <h4 className="text-xl font-bold text-primary mb-4">Why is a Sale Deed Important?</h4>
-                  <p className="text-muted-foreground mb-4">
-                    A registered Sale Deed in Hapur is not just a piece of paper—it is the legal foundation of property ownership. Without this document, a buyer cannot legally claim rights over the purchased property.
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <h5 className="font-semibold text-green-800 mb-2">Legal Benefits</h5>
-                      <ul className="text-sm text-green-700 space-y-1">
-                        <li>• Legally confirms ownership transfer</li>
-                        <li>• Protects from future disputes</li>
-                        <li>• Required for mutation (नामांतरण)</li>
-                      </ul>
-                    </div>
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <h5 className="font-semibold text-blue-800 mb-2">Financial Benefits</h5>
-                      <ul className="text-sm text-blue-700 space-y-1">
-                        <li>• Required for home loans</li>
-                        <li>• Admissible in court as evidence</li>
-                        <li>• Essential for property registration</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6">
-                    <h5 className="font-bold text-yellow-800 mb-2">⚠️ Important Note:</h5>
-                    <p className="text-yellow-700">
-                      An unregistered Sale Deed has no legal value. Even if signed, if it is not registered, it cannot be used as proof of ownership, and courts will not consider it valid evidence.
-                    </p>
-                  </div>
-
-                  <div className="bg-primary text-primary-foreground rounded-lg p-6 text-center">
-                    <h4 className="text-xl font-bold mb-3">Expert Sale Deed Services in Hapur</h4>
-                    <p className="mb-4">
-                      With 33+ years of legal experience, Advocate Ajay Shankar Sharma provides professional and error-free Sale Deed drafting services in Hapur.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <a href="tel:7037455191">
-                        <Button variant="secondary" className="font-semibold">
-                          <Phone className="w-4 h-4 mr-2" />
-                          Call: 7037455191
-                        </Button>
-                      </a>
-                      <a href="/book-consultant">
-                        <Button variant="secondary" className="font-semibold">
-                          <BookOpen className="w-4 h-4 mr-2" />
-                          Book Consultation
-                        </Button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground text-lg">
-              Stay updated with the latest property law guides and legal insights from our expert team
-            </p>
           </div>
         </div>
       </section>
