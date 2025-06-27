@@ -1,19 +1,8 @@
-
-import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Search, Receipt, Gavel, Laptop, User, Edit, Plus, X, Play, Image as ImageIcon } from "lucide-react";
+import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Receipt, Gavel, Laptop, X, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState, useEffect } from "react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -114,6 +103,7 @@ const Index = () => {
               <a href="/" className="text-sm xl:text-base text-primary font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
+              <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
               <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
               <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
               <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
@@ -420,35 +410,99 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Blog Preview Section */}
+      <section className="py-8 md:py-12 bg-gradient-to-r from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Latest Legal Insights
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Expert guidance on property law and legal documentation
+            </p>
+          </div>
+          
+          <Card className="max-w-4xl mx-auto shadow-xl">
+            <div className="relative h-48 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-t-lg">
+              <div className="absolute inset-0 bg-black bg-opacity-30 rounded-t-lg"></div>
+              <div className="absolute bottom-4 left-6 text-white">
+                <div className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
+                  Featured Article
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">विक्रय पत्र (Sale Deed) – A Complete Guide</h3>
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="h-4 w-4" />
+                    <span>December 27, 2024</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <User className="h-4 w-4" />
+                    <span>Advocate Ajay Shankar Sharma</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <CardContent className="p-6 md:p-8">
+              <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                A विक्रय पत्र (Sale Deed) is one of the most important legal documents involved in the process of buying or selling property in India. Learn everything you need to know about Sale Deeds in Hapur, their importance, contents, and legal process.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="flex items-center space-x-2">
+                  <FileText className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Legal Documentation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Scale className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Property Registration</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Award className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">Expert Guidance</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/blog" className="flex-1">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Read Full Article
+                  </Button>
+                </a>
+                <a href="/contact" className="flex-1">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-semibold">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Get Expert Consultation
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-8 md:py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             What Our Clients Say
           </h2>
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent className="-ml-1">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="h-full shadow-lg">
-                      <CardContent className="p-6">
-                        <div className="flex mb-2">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                          ))}
-                        </div>
-                        <p className="text-muted-foreground mb-4">"{testimonial.feedback}"</p>
-                        <p className="font-semibold text-primary">{testimonial.name}</p>
-                      </CardContent>
-                    </Card>
+          <div className="flex overflow-x-auto space-x-4 max-w-5xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="min-w-[300px] shadow-lg flex-shrink-0">
+                <CardContent className="p-6">
+                  <div className="flex mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  <p className="text-muted-foreground mb-4">"{testimonial.feedback}"</p>
+                  <p className="font-semibold text-primary">{testimonial.name}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
