@@ -15,7 +15,14 @@ const Services = () => {
     "Lease Deed (Patta Vilekh)",
     "Mutation / Name Transfer (Naamantaran)",
     "Stamp Duty Guidance",
-    "Property Verification"
+    "Property Verification",
+    "Property Documents Verification",
+    "Property Documents Drafting", 
+    "Property Documents Registration",
+    "Mutation / Name Transfer (नामांतरण / नाम परिवर्तन)",
+    "Expert Resolution of Stamp Duty Case",
+    "Legal Consultancy for Property Matters",
+    "Online Legal Help & Documents Assistant"
   ];
 
   const whyChoosePoints = [
@@ -149,8 +156,8 @@ const Services = () => {
 
               {/* Services Offered Section */}
               <div className="bg-primary/5 rounded-xl p-8 mb-12">
-                <h3 className="text-2xl font-bold text-primary mb-6">🔹 Services Offered</h3>
-                <p className="text-lg mb-6">Here's a glimpse of the comprehensive property-related legal services offered:</p>
+                <h3 className="text-2xl font-bold text-primary mb-6">🔹 Comprehensive Property Legal Services</h3>
+                <p className="text-lg mb-6">Here's a complete list of our property-related legal services:</p>
                 <div className="grid md:grid-cols-2 gap-3">
                   {services.map((service, index) => (
                     <div key={index} className="flex items-center space-x-3">
@@ -291,7 +298,7 @@ const Services = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
+            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s | Presented by Digivizual</p>
           </div>
         </div>
       </footer>
