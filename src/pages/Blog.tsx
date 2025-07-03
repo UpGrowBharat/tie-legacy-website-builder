@@ -2,31 +2,45 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, User, Phone, MapPin } from "lucide-react";
+import { Calendar, User, Phone, MapPin, FileText, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+        <div className="container mx-auto px-4 py-2 md:py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
               <img 
                 src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-                alt="Tiewalavakil Logo" 
-                className="h-12 w-auto"
+                alt="Tiewala Vakil Logo" 
+                className="h-16 md:h-24 w-auto"
               />
-              <span className="text-xl font-bold text-blue-900">Tiewalavakil</span>
-            </Link>
-            <nav className="hidden md:flex space-x-6">
-              <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600">About</Link>
-              <Link to="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
-              <Link to="/blog" className="text-blue-600 font-medium">Blog</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+            </div>
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+              <Link to="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</Link>
+              <Link to="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</Link>
+              <Link to="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</Link>
+              <Link to="/blog" className="text-sm xl:text-base text-primary font-bold">Blog</Link>
+              <Link to="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</Link>
+              <Link to="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</Link>
             </nav>
+            <div className="flex items-center space-x-2 md:space-x-4">
+              <Link to="/book-consultant">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  Book Consultant
+                </Button>
+              </Link>
+              <a href="tel:7037455191">
+                <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  Call
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -40,9 +54,83 @@ const Blog = () => {
             <p className="text-xl text-gray-600">Expert guidance on property law and legal documentation</p>
           </div>
 
-          {/* Featured Blog Post */}
+          {/* Blog Posts Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* First Blog Post */}
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="relative h-48 bg-gradient-to-r from-blue-600 to-indigo-700">
+                <img 
+                  src="/lovable-uploads/315b4579-da29-4b6d-931b-adccdbf5ccee.png" 
+                  alt="Sale Deed Guide" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <Badge className="bg-yellow-500 text-black mb-2">Featured</Badge>
+                  <h2 className="text-xl font-bold">विक्रय पत्र (Sale Deed) Guide</h2>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="h-4 w-4" />
+                    <span>December 27, 2024</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <span>By Advocate Ajay Shankar Sharma</span>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  A comprehensive guide to Sale Deed (विक्रय पत्र) - one of the most important legal documents in property transactions. Learn about its importance, contents, and registration process.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Read Full Article
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Second Blog Post */}
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="relative h-48 bg-gradient-to-r from-green-600 to-blue-700">
+                <img 
+                  src="/lovable-uploads/66396184-1e67-4743-938c-cd5ecac431d9.png" 
+                  alt="Property Documentation" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <Badge className="bg-green-500 text-white mb-2">Legal Guide</Badge>
+                  <h2 className="text-xl font-bold">Property Documentation Tips</h2>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="h-4 w-4" />
+                    <span>December 25, 2024</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <span>By Advocate Ajay Shankar Sharma</span>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Essential tips for proper property documentation in Hapur. Learn about required documents, verification processes, and how to avoid common mistakes.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Read Full Article
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Detailed Blog Content */}
           <Card className="mb-8">
             <div className="relative h-64 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-t-lg">
+              <img 
+                src="/lovable-uploads/315b4579-da29-4b6d-931b-adccdbf5ccee.png" 
+                alt="Sale Deed Documentation" 
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-30 rounded-t-lg"></div>
               <div className="absolute bottom-4 left-6 text-white">
                 <Badge className="bg-yellow-500 text-black mb-2">Featured Post</Badge>
@@ -53,7 +141,6 @@ const Blog = () => {
                     <span>December 27, 2024</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <User className="h-4 w-4" />
                     <span>Advocate Ajay Shankar Sharma</span>
                   </div>
                 </div>
@@ -210,10 +297,65 @@ const Blog = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Tiewalavakil. All rights reserved.</p>
-          <p className="text-sm text-gray-400 mt-2">Presented by Digivizual</p>
+      <footer className="py-12 bg-amber-50 text-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <img 
+                  src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
+                  alt="Tiewala Vakil Logo" 
+                  className="h-16 w-auto"
+                />
+              </div>
+              <p className="text-slate-600 mb-6 leading-relaxed text-base md:text-lg">
+                India's trusted property legal service platform, with 75+ years of heritage. 
+                We simplify registration, documentation and consultation services.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Contact</h4>
+              <div className="space-y-4 text-slate-600">
+                <div className="flex items-center text-base md:text-lg">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 mr-3" />
+                  7037455191
+                </div>
+                <div className="flex items-center text-base md:text-lg">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-3" />
+                  WhatsApp: 7037455191
+                </div>
+                <div className="text-base md:text-lg">Email: support@tiewalavakil.in</div>
+              </div>
+              <div className="flex space-x-4 mt-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
+                  <span className="font-bold text-sm md:text-base text-white">f</span>
+                </div>
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Quick Links</h4>
+              <div className="space-y-3 text-slate-600">
+                <div><Link to="/services" className="hover:text-slate-800 transition-colors text-base md:text-lg">Services</Link></div>
+                <div><Link to="/about" className="hover:text-slate-800 transition-colors text-base md:text-lg">About Us</Link></div>
+                <div><Link to="/blog" className="hover:text-slate-800 transition-colors text-base md:text-lg">Blog</Link></div>
+                <div><Link to="/book-consultant" className="hover:text-slate-800 transition-colors text-base md:text-lg">Book Consultant</Link></div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
+              <div className="text-slate-600">
+                <p className="text-base md:text-lg mb-4">
+                  Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-slate-300 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-slate-500">
+            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
+          </div>
         </div>
       </footer>
     </div>

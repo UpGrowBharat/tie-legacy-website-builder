@@ -10,7 +10,6 @@ import Services from "./pages/Services";
 import BookConsultant from "./pages/BookConsultant";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
-import News from "./pages/News";
 import Blog from "./pages/Blog";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
@@ -29,7 +28,6 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/book-consultant" element={<BookConsultant />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/news" element={<News />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/admin" element={<Admin />} />

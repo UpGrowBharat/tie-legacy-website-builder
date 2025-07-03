@@ -104,7 +104,6 @@ const Index = () => {
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-              <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
               <a href="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</a>
               <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
             </nav>
@@ -489,13 +488,13 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             Our Office & Services Gallery
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {galleryItems.map((src, index) => (
               <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <img 
                   src={src} 
                   alt={`Office consultation session ${index + 1}`} 
-                  className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300 group-hover:brightness-110" 
+                  className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300 group-hover:brightness-110" 
                 />
               </div>
             ))}
@@ -568,52 +567,37 @@ const Index = () => {
                   WhatsApp: 7037455191
                 </div>
                 <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Chamber no. 4, Tehsil Compound Hapur -  245101</div>
-                <div className="mt-4">
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full h-24 bg-gray-700 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors"
-                  >
-                    <div className="w-full h-full flex items-center justify-center text-white">
-                      <MapPin className="w-6 h-6 mr-2" />
-                      <span>View on Google Maps</span>
-                    </div>
-                  </a>
+                <div className="text-lg">Email: support@tiewalavakil.in</div>
+              </div>
+              <div className="flex space-x-4 mt-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
+                  <span className="font-bold text-sm md:text-base text-white">f</span>
+                </div>
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
                 </div>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xl">Quick Links</h4>
-              <div className="space-y-3 text-slate-700">
-                <div><a href="/services" className="hover:text-primary transition-colors text-lg">Services</a></div>
-                <div><a href="/about" className="hover:text-primary transition-colors text-lg">About Us</a></div>
-                <div><a href="/blog" className="hover:text-primary transition-colors text-lg">Blog</a></div>
-                <div><a href="/privacy" className="hover:text-primary transition-colors text-lg">Privacy</a></div>
-                <div><a href="/news" className="hover:text-primary transition-colors text-lg">News & Updates</a></div>
-                <div><a href="/book-consultant" className="hover:text-primary transition-colors text-lg">Book Consultant</a></div>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Quick Links</h4>
+              <div className="space-y-3 text-slate-600">
+                <div><a href="/services" className="hover:text-slate-800 transition-colors text-base md:text-lg">Services</a></div>
+                <div><a href="/about" className="hover:text-slate-800 transition-colors text-base md:text-lg">About Us</a></div>
+                <div><a href="/blog" className="hover:text-slate-800 transition-colors text-base md:text-lg">Blog</a></div>
+                <div><a href="/book-consultant" className="hover:text-slate-800 transition-colors text-base md:text-lg">Book Consultant</a></div>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xl">Connect</h4>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                  <span className="font-bold">f</span>
-                </div>
-                <div className="w-10 h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
-                  <span className="font-bold">in</span>
-                </div>
-                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-                  <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                    <MessageCircle className="w-5 h-5" />
-                  </div>
-                </a>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
+              <div className="text-slate-600">
+                <p className="text-base md:text-lg mb-4">
+                  Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
+                </p>
               </div>
             </div>
           </div>
-          <div className="border-t border-slate-300 mt-12 pt-8 text-center text-slate-600">
-            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
+          <div className="border-t border-slate-300 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-slate-500">
+            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
           </div>
         </div>
       </footer>
