@@ -99,18 +99,24 @@ const Index = () => {
                 className="h-16 md:h-24 w-auto"
               />
             </div>
-            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+            <nav className="hidden lg:flex space-x-4 xl:space-x-6">
               <a href="/" className="text-sm xl:text-base text-primary font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-              <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
               <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
+              <a href="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</a>
               <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
             </nav>
             <div className="flex items-center space-x-2 md:space-x-4">
-              <a href="tel:7037455191">
+              <a href="/book-consultant">
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <BookOpen className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  Book Consultant
+                </Button>
+              </a>
+              <a href="tel:7037455191">
+                <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
                   <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                   <span className="hidden sm:inline">Call: </span>7037455191
                 </Button>
@@ -296,7 +302,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
                   alt="Late Shri Narottam Dutt Sharma - Legal Family Heritage" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center scale-110"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
@@ -410,77 +416,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog Preview Section */}
-      <section className="py-8 md:py-12 bg-gradient-to-r from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Latest Legal Insights
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Expert guidance on property law and legal documentation
-            </p>
-          </div>
-          
-          <Card className="max-w-4xl mx-auto shadow-xl">
-            <div className="relative h-48 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-t-lg">
-              <div className="absolute inset-0 bg-black bg-opacity-30 rounded-t-lg"></div>
-              <div className="absolute bottom-4 left-6 text-white">
-                <div className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
-                  Featured Article
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">विक्रय पत्र (Sale Deed) – A Complete Guide</h3>
-                <div className="flex items-center space-x-4 text-sm">
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>December 27, 2024</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <User className="h-4 w-4" />
-                    <span>Advocate Ajay Shankar Sharma</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <CardContent className="p-6 md:p-8">
-              <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                A विक्रय पत्र (Sale Deed) is one of the most important legal documents involved in the process of buying or selling property in India. Learn everything you need to know about Sale Deeds in Hapur, their importance, contents, and legal process.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-4 mb-6">
-                <div className="flex items-center space-x-2">
-                  <FileText className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">Legal Documentation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">Property Registration</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">Expert Guidance</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/blog" className="flex-1">
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    Read Full Article
-                  </Button>
-                </a>
-                <a href="/contact" className="flex-1">
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-semibold">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Get Expert Consultation
-                  </Button>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-8 md:py-12 bg-muted/30">
@@ -488,17 +423,24 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
             What Our Clients Say
           </h2>
-          <div className="flex overflow-x-auto space-x-4 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="min-w-[300px] shadow-lg flex-shrink-0">
-                <CardContent className="p-6">
-                  <div className="flex mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
+              <Card key={index} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 border-2 border-primary/10">
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex justify-center mb-4">
+                    <div className="flex">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-muted-foreground mb-4">"{testimonial.feedback}"</p>
-                  <p className="font-semibold text-primary">{testimonial.name}</p>
+                  <div className="text-center">
+                    <p className="text-muted-foreground mb-6 text-lg leading-relaxed italic">"{testimonial.feedback}"</p>
+                    <div className="border-t border-primary/20 pt-4">
+                      <p className="font-bold text-primary text-lg">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">Satisfied Client</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -598,7 +540,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-slate-900 text-white">
+      <footer className="py-16 bg-amber-50 text-slate-800">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-10">
             <div>
@@ -609,14 +551,14 @@ const Index = () => {
                   className="h-16 w-auto"
                 />
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+              <p className="text-slate-700 mb-6 leading-relaxed text-lg">
                 India's trusted property legal service platform, with 75+ years of heritage. 
                 We simplify registration, documentation and consultation services from our Hapur office.
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-6 text-xl">Contact</h4>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-700">
                 <div className="flex items-center text-lg">
                   <Phone className="w-5 h-5 mr-3" />
                   7037455191
@@ -644,11 +586,13 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-xl">Quick Links</h4>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/services" className="hover:text-white transition-colors text-lg">Services</a></div>
-                <div><a href="/about" className="hover:text-white transition-colors text-lg">About Us</a></div>
-                <div><a href="/news" className="hover:text-white transition-colors text-lg">News & Updates</a></div>
-                <div><a href="/book-consultant" className="hover:text-white transition-colors text-lg">Book Consultant</a></div>
+              <div className="space-y-3 text-slate-700">
+                <div><a href="/services" className="hover:text-primary transition-colors text-lg">Services</a></div>
+                <div><a href="/about" className="hover:text-primary transition-colors text-lg">About Us</a></div>
+                <div><a href="/blog" className="hover:text-primary transition-colors text-lg">Blog</a></div>
+                <div><a href="/privacy" className="hover:text-primary transition-colors text-lg">Privacy</a></div>
+                <div><a href="/news" className="hover:text-primary transition-colors text-lg">News & Updates</a></div>
+                <div><a href="/book-consultant" className="hover:text-primary transition-colors text-lg">Book Consultant</a></div>
               </div>
             </div>
             <div>
@@ -668,7 +612,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+          <div className="border-t border-slate-300 mt-12 pt-8 text-center text-slate-600">
             <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
           </div>
         </div>

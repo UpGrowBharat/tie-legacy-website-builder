@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,14 +18,20 @@ const Contact = () => {
     message: ""
   });
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent Successfully",
-      description: "We will get back to you within 24 hours.",
+      title: "Thank You for Contacting Us!",
+      description: "Your message has been sent successfully. We will get back to you within 24 hours.",
     });
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    
+    // Redirect to homepage after 3 seconds
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
   };
 
   return (
@@ -40,19 +47,28 @@ const Contact = () => {
                 className="h-16 md:h-24 w-auto"
               />
             </div>
-            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+            <nav className="hidden lg:flex space-x-4 xl:space-x-6">
               <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
-              <a href="/book-consultant" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Book Consultant</a>
+              <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
               <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
+              <a href="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</a>
               <a href="/contact" className="text-primary font-bold text-sm xl:text-base">Contact Us</a>
             </nav>
             <div className="flex items-center space-x-2 md:space-x-4">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                <span className="hidden sm:inline">Call: </span>7037455191
-              </Button>
+              <a href="/book-consultant">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  Book Consultant
+                </Button>
+              </a>
+              <a href="tel:7037455191">
+                <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  <span className="hidden sm:inline">Call: </span>7037455191
+                </Button>
+              </a>
             </div>
           </div>
         </div>
