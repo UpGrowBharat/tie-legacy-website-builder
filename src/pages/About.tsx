@@ -36,7 +36,6 @@ const About = () => {
                   src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
                   alt="Late Shri Nagendra Dutt Sharma" 
                   className="w-full h-full object-cover object-center"
-                  style={{objectPosition: '50% 20%'}}
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
@@ -49,8 +48,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
                   alt="Late Shri Narottam Dutt Sharma" 
-                  className="w-full h-full object-cover object-center"
-                  style={{objectPosition: '50% 10%'}}
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
@@ -168,7 +166,7 @@ const About = () => {
               </Button>
             </a>
             <a href="tel:7037455191">
-              <Button size="lg" variant="outline" className="font-semibold px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="font-semibold px-8 py-4 border-white text-white bg-transparent hover:bg-white hover:text-primary">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>

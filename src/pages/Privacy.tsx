@@ -1,7 +1,10 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, FileText, RotateCcw, Phone, MessageCircle, ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Privacy = () => {
   const [activeTab, setActiveTab] = useState("privacy");
@@ -13,45 +16,92 @@ const Privacy = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
               <Shield className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold text-primary">Privacy Policy</h2>
+              <h2 className="text-3xl font-bold text-primary">Privacy Policy – Tiewalavakil</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <img 
-                src="/lovable-uploads/2561dbe8-f8bd-4677-9fc9-e1cc79f71abe.png" 
-                alt="Privacy Protection" 
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
-              <div className="flex items-center">
-                <div>
-                  <h3 className="text-xl font-bold text-primary mb-4">Your Privacy Matters</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    At TiewalaVakil, we are committed to protecting your personal information and ensuring your privacy is maintained throughout our legal consultation services.
-                  </p>
+            <p className="text-sm text-muted-foreground mb-6">Effective Date: January 2024</p>
+            
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              At Tiewalavakil, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and safeguard your data when you use our website or legal services.
+            </p>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">1. 📄 Information We Collect</h3>
+                <p className="text-muted-foreground mb-3">We may collect the following types of information:</p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li><strong>Personal Information:</strong> Name, mobile number, email, address, and ID proofs.</li>
+                  <li><strong>Property Details:</strong> Land records, ownership documents, sale deed, etc.</li>
+                  <li><strong>Service Usage Info:</strong> Pages you visit, forms you submit, and documents uploaded.</li>
+                  <li><strong>Communication Details:</strong> When you call, email, or chat with us.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">2. 🔍 How We Use Your Information</h3>
+                <p className="text-muted-foreground mb-3">We use your information to:</p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li>Provide legal advice, document verification, and registration services.</li>
+                  <li>Prepare or draft your legal documents as requested.</li>
+                  <li>Schedule appointments with government offices.</li>
+                  <li>Send updates and communicate regarding your case.</li>
+                  <li>Improve our website and services.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">3. 🔐 Data Security</h3>
+                <p className="text-muted-foreground">
+                  We take all necessary steps to protect your data. Your information is stored securely and only shared with trusted legal partners or government platforms when required for service delivery. We do not sell or rent your personal information to anyone.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">4. 📤 Sharing Your Information</h3>
+                <p className="text-muted-foreground mb-3">We may share your information with:</p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li>Sub-registrar offices or government bodies (only if required).</li>
+                  <li>Advocates or legal professionals working on your case.</li>
+                  <li>Our trusted support staff under confidentiality.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">5. 🍪 Cookies</h3>
+                <p className="text-muted-foreground">
+                  Our website uses cookies to improve user experience. Cookies help us understand which pages are most visited and how we can improve our services. You can disable cookies through your browser settings anytime.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">6. ✅ Your Rights</h3>
+                <p className="text-muted-foreground mb-3">You have the right to:</p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li>Request access to the data we hold about you.</li>
+                  <li>Ask us to update or correct incorrect information.</li>
+                  <li>Ask us to delete your data (except where legally required to keep it).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">7. 📞 Contact Us</h3>
+                <p className="text-muted-foreground mb-3">
+                  If you have any questions about this Privacy Policy or want to update/remove your data, you can contact us at:
+                </p>
+                <div className="bg-muted/50 p-4 rounded-lg">
+                  <p className="font-semibold">Advocate Ajay Shankar Sharma</p>
+                  <p>Tiewalavakil – Hapur Office</p>
+                  <p>📧 Email: tiewalavakil@gmail.com</p>
+                  <p>📞 Phone: 7037455191</p>
                 </div>
               </div>
-            </div>
 
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-primary">Information We Collect</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We collect information you provide directly to us, such as when you book a consultation, fill out forms, or communicate with our legal team. This includes your name, contact information, and case details necessary for providing legal services.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">How We Use Your Information</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Your information is used solely for providing legal consultation services, maintaining client records as required by law, and communicating with you about your legal matters. We maintain strict confidentiality as per legal professional standards.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">Data Protection</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. All client information is treated with the highest level of confidentiality.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">Contact Information</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                For any privacy-related concerns, please contact Advocate Ajay Shankar Sharma at 7037455191 or visit our office at Chamber no. 4, Tehsil Compound Hapur - 245101.
-              </p>
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">8. 🔄 Policy Updates</h3>
+                <p className="text-muted-foreground">
+                  We may update this Privacy Policy from time to time. Changes will be posted on this page with the updated date. We suggest checking this page regularly to stay informed.
+                </p>
+              </div>
             </div>
           </div>
         );
@@ -64,22 +114,6 @@ const Privacy = () => {
               <h2 className="text-3xl font-bold text-primary">Legal Disclaimer</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <img 
-                src="/lovable-uploads/315b4579-da29-4b6d-931b-adccdbf5ccee.png" 
-                alt="Legal Documentation" 
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
-              <div className="flex items-center">
-                <div>
-                  <h3 className="text-xl font-bold text-primary mb-4">Important Legal Notice</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    The information provided on this website is for general informational purposes only and does not constitute legal advice.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-primary">No Attorney-Client Relationship</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -109,50 +143,97 @@ const Privacy = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
               <RotateCcw className="w-8 h-8 text-primary" />
-              <h2 className="text-3xl font-bold text-primary">Return Policy</h2>
+              <h2 className="text-3xl font-bold text-primary">Return Policy - Sale Deed Importance</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <img 
-                src="/lovable-uploads/66396184-1e67-4743-938c-cd5ecac431d9.png" 
-                alt="Client Satisfaction" 
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
-              <div className="flex items-center">
-                <div>
-                  <h3 className="text-xl font-bold text-primary mb-4">Client Satisfaction Guarantee</h3>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Why Sale Deed is the Most Crucial Legal Document in Property Transactions – Explained by Hapur's Trusted Legal Expert</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  In the Indian real estate market, property frauds and legal disputes are more common than ever. Whether you're buying a plot, flat, or commercial shop — the Sale Deed is the most important legal document that ensures you are the lawful owner of the property. At Tiewalavakil, Hapur, we've seen dozens of cases where people assumed they owned a property just because they paid money — but had no valid Sale Deed to prove it.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Let's understand why this single document can either secure your ownership — or cost you everything.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">📜 What is a Sale Deed?</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  A Sale Deed (विक्रय पत्र) is a legal document that officially transfers ownership of a property from the seller to the buyer. It is executed after full payment has been made and is registered at the Sub-Registrar Office. Without a registered Sale Deed, your transaction holds no legal value — even if other documents exist.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">🚨 Common Misconceptions</h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  Many property buyers in smaller cities like Hapur, Pilkhuwa, and nearby areas often think that documents like Power of Attorney (POA), Agreement to Sell, or affidavits are enough to claim ownership. But according to Supreme Court rulings, only a registered Sale Deed is considered conclusive proof of ownership.
+                </p>
+                <p className="font-semibold text-primary">
+                  Only a Registered Sale Deed gives you complete legal ownership of the property.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">✅ Why You Must Get a Sale Deed Registered</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <strong>Legal Ownership Guarantee:</strong> The Sale Deed is the only document that confirms legal ownership.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <strong>Protects Against Future Disputes:</strong> Without it, someone else may claim the property later, especially in disputed land.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <strong>Essential for Mutation & Loan Processing:</strong> You can't update municipal records (mutation) or apply for a loan without it.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2"></div>
+                    <div>
+                      <strong>Accepted in All Courts:</strong> It is admissible in court as the final evidence of your ownership.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">📌 Real Case from Hapur – Why One Buyer Lost Their Property</h3>
+                <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
                   <p className="text-muted-foreground leading-relaxed">
-                    We are committed to providing quality legal services and ensuring client satisfaction in all our consultation services.
+                    A client from Hapur came to us after paying ₹12 lakhs for a residential plot. He had an unregistered "Agreement to Sell" and a notarized affidavit, but the seller disappeared. Since there was no registered Sale Deed, the buyer could not claim ownership, mutation was denied, and he lost his hard-earned money.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mt-3">
+                    Had he visited us earlier, we would have ensured the Sale Deed was properly executed and registered — protecting his rights legally.
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-primary">Consultation Fees</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Our consultation fees are as follows: Phone consultation - ₹500, Video consultation - ₹800, WhatsApp consultation - ₹300, and Document review - ₹1500. All fees are clearly communicated before service delivery.
-              </p>
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-3">🖋️ Conclusion: Don't Buy Property Without a Sale Deed</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Whether you are buying property in Hapur, Pilkhuwa, Simbhaoli, or anywhere in Uttar Pradesh, always ensure your Sale Deed is custom-drafted, legally verified, and registered by a professional. This small legal step protects your big investment for a lifetime.
+                </p>
+              </div>
 
-              <h3 className="text-xl font-bold text-primary">Refund Policy</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Consultation fees are generally non-refundable once the service has been provided. However, in cases where technical issues prevent the consultation from taking place, a full refund or rescheduling will be offered.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">Service Delivery</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We ensure timely delivery of all legal services. If there are any delays or issues with service delivery, clients will be promptly notified and alternative arrangements will be made.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">Cancellation Policy</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Consultations can be cancelled or rescheduled up to 2 hours before the scheduled time without any penalty. Cancellations made within 2 hours may be subject to a cancellation fee.
-              </p>
-
-              <h3 className="text-xl font-bold text-primary">Contact for Concerns</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                For any concerns regarding our services or policies, please contact us at 7037455191 or visit our office. We are committed to resolving any issues promptly and fairly.
-              </p>
+              <div className="bg-primary/10 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-primary mb-3">📞 Contact Hapur's Most Trusted Legal Expert</h3>
+                <p className="font-semibold">Tiewalavakil – Advocate Ajay Shankar Sharma</p>
+                <p className="text-muted-foreground">📍 Sub-Registrar Office Road, Near Tehsil, Hapur</p>
+                <p className="text-muted-foreground">📲 Call/WhatsApp: 7037455191</p>
+                <p className="text-muted-foreground">🌐 Website: www.tiewalavakil.in</p>
+                <p className="text-sm text-muted-foreground mt-3 font-medium">
+                  Tiewalavakil – Legal Services You Can Trust Since 1950s<br/>
+                  Trusted Legal Partner for Property Law in Hapur.
+                </p>
+              </div>
             </div>
           </div>
         );
@@ -164,42 +245,7 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container mx-auto px-4 py-2 md:py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-                alt="Tiewala Vakil Logo" 
-                className="h-16 md:h-24 w-auto"
-              />
-            </div>
-            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
-              <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
-              <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
-              <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
-              <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-              <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
-              <a href="/privacy" className="text-sm xl:text-base text-primary font-medium">Privacy</a>
-              <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
-            </nav>
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <a href="/book-consultant">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                  Book Consultant
-                </Button>
-              </a>
-              <a href="tel:7037455191">
-                <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                  Call
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Back to Home Button */}
       <div className="container mx-auto px-4 py-4">
@@ -277,24 +323,7 @@ const Privacy = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-amber-50 text-slate-800">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <img 
-              src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-              alt="Tiewala Vakil Logo" 
-              className="h-12 w-auto"
-            />
-          </div>
-          <p className="text-slate-600 mb-4">
-            Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
-          </p>
-          <p className="text-slate-500">
-            &copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
