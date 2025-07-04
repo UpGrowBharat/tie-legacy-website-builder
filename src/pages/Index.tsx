@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const testimonials = [
   {
@@ -88,114 +90,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container mx-auto px-4 py-2 md:py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-                alt="Tiewala Vakil Logo" 
-                className="h-16 md:h-24 w-auto"
-              />
-            </div>
-            <nav className="hidden lg:flex space-x-4 xl:space-x-6">
-              <a href="/" className="text-sm xl:text-base text-primary font-medium">Home</a>
-              <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
-              <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
-              <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-              <a href="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</a>
-              <a href="/contact" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Contact Us</a>
-            </nav>
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <a href="/book-consultant">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                  <BookOpen className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                  Book Consultant
-                </Button>
-              </a>
-              <a href="tel:7037455191">
-                <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                  <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                  <span className="hidden sm:inline">Call: </span>7037455191
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* WhatsApp Float Button - Always Visible */}
-      <a
-        href="https://wa.me/917037455191"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 text-sm font-semibold flex items-center"
-      >
-        <MessageCircle className="w-4 h-4 mr-2" />
-        WhatsApp Consultation
-      </a>
-
-      {/* Contact Button - Small */}
-      <div className="fixed left-4 md:left-6 bottom-4 md:bottom-6 z-40">
-        <Button
-          onClick={() => setShowContact(!showContact)}
-          className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm px-4 py-2 rounded-lg shadow-lg"
-        >
-          Contact
-        </Button>
-
-        {/* Contact Popup */}
-        {showContact && (
-          <Card className="absolute bottom-16 left-0 w-72 xl:w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50 animate-in slide-in-from-bottom-4">
-            <CardContent className="p-4 xl:p-6">
-              <div className="flex justify-between items-start mb-4">
-                <h4 className="font-bold text-sm xl:text-base text-primary">Quick Contact</h4>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowContact(false)}
-                  className="h-6 w-6 p-0"
-                >
-                  <X className="w-4 h-4" />
-                </Button>
-              </div>
-              <div className="flex items-center space-x-3 xl:space-x-4 mb-4 xl:mb-5">
-                <div className="w-14 h-16 xl:w-16 xl:h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
-                  <img 
-                    src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
-                    alt="Advocate Ajay Shankar Sharma" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm xl:text-base text-primary">Advocate Ajay Shankar Sharma</h4>
-                  <p className="text-xs xl:text-sm text-muted-foreground font-medium">33+ Years Experience</p>
-                  <p className="text-xs xl:text-sm text-muted-foreground">Based in Hapur</p>
-                </div>
-              </div>
-              <div className="bg-primary/10 rounded-lg p-3 xl:p-4 mb-4 xl:mb-5">
-                <p className="text-xs xl:text-sm text-primary font-bold mb-2">🏛️ Legacy</p>
-                <p className="text-xs xl:text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
-              </div>
-              <div className="space-y-2 xl:space-y-3">
-                <a href="tel:7037455191">
-                  <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs xl:text-sm">
-                    <Phone className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                    Call Now
-                  </Button>
-                </a>
-                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs xl:text-sm">
-                    <MessageCircle className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                    Chat Now
-                  </Button>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-      </div>
+      <Header />
 
       {/* Hero Section */}
       <section id="home" className="py-8 md:py-16 bg-gradient-to-r from-blue-50 to-blue-100">
@@ -415,6 +310,58 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Office & Services Gallery */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
+            Our Office & Services Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/5958f14a-430e-49aa-90f7-633cd71a42e6.png" 
+                alt="Office Interior" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/66396184-1e67-4743-938c-cd5ecac431d9.png" 
+                alt="Legal Documentation" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
+                alt="Client Consultation" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
+                alt="Legal Expertise" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/b4ec8f5d-4f96-45f5-94da-a770ba9dc513.png" 
+                alt="Property Services" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/c1baa9e5-2320-40a7-9fd6-d0782076aa21.png" 
+                alt="Office Building" 
+                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-8 md:py-12 bg-muted/30">
@@ -482,31 +429,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Our Office & Services Gallery
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryItems.map((src, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <img 
-                  src={src} 
-                  alt={`Office consultation session ${index + 1}`} 
-                  className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300 group-hover:brightness-110" 
-                />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground text-lg">
-              Professional legal consultations and documentation services at our Hapur office
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -538,69 +460,69 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact Button - Small */}
+      <div className="fixed left-4 md:left-6 bottom-4 md:bottom-6 z-40">
+        <Button
+          onClick={() => setShowContact(!showContact)}
+          className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm px-4 py-2 rounded-lg shadow-lg"
+        >
+          Contact
+        </Button>
+
+        {/* Contact Popup */}
+        {showContact && (
+          <Card className="absolute bottom-16 left-0 w-72 xl:w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50 animate-in slide-in-from-bottom-4">
+            <CardContent className="p-4 xl:p-6">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="font-bold text-sm xl:text-base text-primary">Quick Contact</h4>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowContact(false)}
+                  className="h-6 w-6 p-0"
+                >
+                  <X className="w-4 h-4" />
+                </Button>
+              </div>
+              <div className="flex items-center space-x-3 xl:space-x-4 mb-4 xl:mb-5">
+                <div className="w-14 h-16 xl:w-16 xl:h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
+                  <img 
+                    src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
+                    alt="Advocate Ajay Shankar Sharma" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm xl:text-base text-primary">Advocate Ajay Shankar Sharma</h4>
+                  <p className="text-xs xl:text-sm text-muted-foreground font-medium">33+ Years Experience</p>
+                  <p className="text-xs xl:text-sm text-muted-foreground">Based in Hapur</p>
+                </div>
+              </div>
+              <div className="bg-primary/10 rounded-lg p-3 xl:p-4 mb-4 xl:mb-5">
+                <p className="text-xs xl:text-sm text-primary font-bold mb-2">🏛️ Legacy</p>
+                <p className="text-xs xl:text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
+              </div>
+              <div className="space-y-2 xl:space-y-3">
+                <a href="tel:7037455191">
+                  <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs xl:text-sm">
+                    <Phone className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
+                    Call Now
+                  </Button>
+                </a>
+                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs xl:text-sm">
+                    <MessageCircle className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
+                    Chat Now
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+
       {/* Footer */}
-      <footer className="py-16 bg-amber-50 text-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-10">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-                  alt="Tiewala Vakil Logo" 
-                  className="h-16 w-auto"
-                />
-              </div>
-              <p className="text-slate-700 mb-6 leading-relaxed text-lg">
-                India's trusted property legal service platform, with 75+ years of heritage. 
-                We simplify registration, documentation and consultation services from our Hapur office.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-xl">Contact</h4>
-              <div className="space-y-4 text-slate-700">
-                <div className="flex items-center text-lg">
-                  <Phone className="w-5 h-5 mr-3" />
-                  7037455191
-                </div>
-                <div className="flex items-center text-lg">
-                  <MessageCircle className="w-5 h-5 mr-3" />
-                  WhatsApp: 7037455191
-                </div>
-                <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Email: support@tiewalavakil.in</div>
-              </div>
-              <div className="flex space-x-4 mt-6">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                  <span className="font-bold text-sm md:text-base text-white">f</span>
-                </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                </div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-lg md:text-xl">Quick Links</h4>
-              <div className="space-y-3 text-slate-600">
-                <div><a href="/services" className="hover:text-slate-800 transition-colors text-base md:text-lg">Services</a></div>
-                <div><a href="/about" className="hover:text-slate-800 transition-colors text-base md:text-lg">About Us</a></div>
-                <div><a href="/blog" className="hover:text-slate-800 transition-colors text-base md:text-lg">Blog</a></div>
-                <div><a href="/book-consultant" className="hover:text-slate-800 transition-colors text-base md:text-lg">Book Consultant</a></div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
-              <div className="text-slate-600">
-                <p className="text-base md:text-lg mb-4">
-                  Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-slate-300 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-slate-500">
-            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-
-import { Phone, MessageCircle, Scale, FileText, Receipt, Search, Gavel, Award, Users, MapPin, Star, CheckCircle } from "lucide-react";
+import { Phone, MessageCircle, Scale, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Services = () => {
   const services = [
@@ -43,32 +43,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-              alt="Tiewala Vakil Logo" 
-              className="h-24 w-auto"
-            />
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
-            <a href="/services" className="text-primary font-bold">Services</a>
-            <a href="/#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="/#consultation" className="text-foreground hover:text-primary transition-colors font-medium">Book Consultation</a>
-            <a href="/#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQs</a>
-            <a href="/#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-              <Phone className="w-4 h-4 mr-2" />
-              Call: 7037455191
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* WhatsApp Float Button */}
       <a
@@ -242,66 +217,7 @@ const Services = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-slate-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-10">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
-                  alt="Tiewala Vakil Logo" 
-                  className="h-16 w-auto"
-                />
-              </div>
-              <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                India's trusted property legal service platform, with 75+ years of heritage. 
-                We simplify registration, documentation and consultation services from our Hapur office.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-xl">Contact</h4>
-              <div className="space-y-4 text-gray-300">
-                <div className="flex items-center text-lg">
-                  <Phone className="w-5 h-5 mr-3" />
-                  7037455191
-                </div>
-                <div className="flex items-center text-lg">
-                  <MessageCircle className="w-5 h-5 mr-3" />
-                  WhatsApp: 7037455191
-                </div>
-                <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Hapur, Uttar Pradesh</div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-xl">Quick Links</h4>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/" className="hover:text-white transition-colors text-lg">Home</a></div>
-                <div><a href="/services" className="hover:text-white transition-colors text-lg">Services</a></div>
-                <div><a href="/#about" className="hover:text-white transition-colors text-lg">About</a></div>
-                <div><a href="/#consultation" className="hover:text-white transition-colors text-lg">Book Now</a></div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-xl">Connect</h4>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                  <span className="font-bold">f</span>
-                </div>
-                <div className="w-10 h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
-                  <span className="font-bold">in</span>
-                </div>
-                <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p className="text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s | Presented by Digivizual</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
