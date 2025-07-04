@@ -67,7 +67,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
                   alt="Late Shri Nagendra Dutt Sharma" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
@@ -80,7 +80,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
                   alt="Late Shri Narottam Dutt Sharma" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center scale-125"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
@@ -93,7 +93,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                   alt="Advocate Ajay Shankar Sharma" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Advocate Ajay Shankar Sharma</h3>
@@ -210,13 +210,13 @@ const About = () => {
       {/* Footer */}
       <footer className="py-12 bg-amber-50 text-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid md:grid-cols-4 gap-8 md:gap-10">
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <img 
                   src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
                   alt="Tiewala Vakil Logo" 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
               <p className="text-slate-600 mb-6 leading-relaxed text-base md:text-lg">
@@ -235,7 +235,7 @@ const About = () => {
                   <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                   WhatsApp: 7037455191
                 </div>
-                <div className="text-base md:text-lg">Email: support@tiewalavakil.in</div>
+                <div className="text-base md:text-lg">Email: tiewalavakil@gmail.com</div>
               </div>
               <div className="flex space-x-4 mt-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
@@ -257,9 +257,13 @@ const About = () => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
-              <div className="text-slate-600">
-                <p className="text-base md:text-lg mb-4">
-                  Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
+              <div className="text-slate-600 mb-4">
+                <p className="text-base md:text-lg mb-2 flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Sub-Registrar Office Road, Near Tehsil, Hapur - 245101, Uttar Pradesh
+                </p>
+                <p className="text-sm text-slate-500">
+                  Current Location: Chamber no. 4, Tehsil Compound Hapur
                 </p>
               </div>
             </div>

@@ -1,91 +1,9 @@
-import { Phone, MessageCircle, Scale, BookOpen, FileText, Clock, Star, ChevronDown, Award, Users, MapPin, Receipt, Gavel, Laptop, X, Play, Calendar, User } from "lucide-react";
+
+import { ArrowRight, Phone, MessageCircle, CheckCircle, Star, Scale, Users, Award, Calendar, User, MapPin, FileText, Camera, Building2, Stamp, Shield, BookOpen, Clock, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-
-const testimonials = [
-  {
-    name: "Rohit Sharma",
-    feedback:
-      "Advocate Ajay Shankar Sharma provided excellent legal advice and helped me resolve my property dispute quickly.",
-    rating: 5,
-  },
-  {
-    name: "Neha Gupta",
-    feedback:
-      "Professional and knowledgeable. Highly recommend for any legal consultation related to property matters.",
-    rating: 5,
-  },
-  {
-    name: "Suresh Kumar",
-    feedback:
-      "Very responsive and clear in communication. The consultation was worth every penny.",
-    rating: 4,
-  },
-];
-
-const videoTestimonials = [
-  {
-    id: 1,
-    name: "Rajesh Kumar",
-    title: "Property Registration Client",
-    thumbnail: "/lovable-uploads/ed62dcfa-e067-48b4-a735-809bf4e22ca3.png",
-    videoUrl: "#",
-    feedback: "Amazing service! Got my property registered without any hassle."
-  },
-  {
-    id: 2,
-    name: "Priya Sharma",
-    title: "Legal Consultation Client",
-    thumbnail: "/lovable-uploads/57a4ba6d-7415-4972-8289-a35cf3235bc0.png",
-    videoUrl: "#",
-    feedback: "Expert advice that saved me from a major property dispute."
-  },
-  {
-    id: 3,
-    name: "Amit Singh",
-    title: "Documentation Service Client",
-    thumbnail: "/lovable-uploads/1cc35620-26d7-4431-b074-a1cd1b3bd2b0.png",
-    videoUrl: "#",
-    feedback: "Professional documentation service with complete transparency."
-  }
-];
-
-const faqs = [
-  {
-    question: "How do I book a consultation?",
-    answer:
-      "You can book a consultation by visiting the Book Consultant page and filling out the form.",
-  },
-  {
-    question: "What are the consultation fees?",
-    answer:
-      "Fees vary depending on the consultation type. Phone consultation is ₹500, Video consultation is ₹800, WhatsApp consultation is ₹300, and Document review is ₹1500.",
-  },
-  {
-    question: "Where is your office located?",
-    answer:
-      "Our office is located at Chamber no. 4, Tehsil Compound Hapur - 245101, Hapur, Uttar Pradesh.",
-  },
-];
-
-const galleryItems = [
-  "/lovable-uploads/2561dbe8-f8bd-4677-9fc9-e1cc79f71abe.png",
-  "/lovable-uploads/315b4579-da29-4b6d-931b-adccdbf5ccee.png",
-  "/lovable-uploads/66396184-1e67-4743-938c-cd5ecac431d9.png",
-  "/lovable-uploads/4208548e-51c4-49ee-b64b-672b210b1a4f.png",
-];
 
 const Index = () => {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const [showContact, setShowContact] = useState(false);
-  const { toast } = useToast();
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -99,7 +17,7 @@ const Index = () => {
                 className="h-16 md:h-24 w-auto"
               />
             </div>
-            <nav className="hidden lg:flex space-x-4 xl:space-x-6">
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
               <a href="/" className="text-sm xl:text-base text-primary font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
@@ -110,14 +28,13 @@ const Index = () => {
             <div className="flex items-center space-x-2 md:space-x-4">
               <a href="/book-consultant">
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
-                  <BookOpen className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                   Book Consultant
                 </Button>
               </a>
               <a href="tel:7037455191">
                 <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
                   <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                  <span className="hidden sm:inline">Call: </span>7037455191
+                  Call
                 </Button>
               </a>
             </div>
@@ -125,252 +42,38 @@ const Index = () => {
         </div>
       </header>
 
-      {/* WhatsApp Float Button - Always Visible */}
-      <a
-        href="https://wa.me/917037455191"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 text-sm font-semibold flex items-center"
-      >
-        <MessageCircle className="w-4 h-4 mr-2" />
-        WhatsApp Consultation
-      </a>
-
-      {/* Contact Button - Small */}
-      <div className="fixed left-4 md:left-6 bottom-4 md:bottom-6 z-40">
-        <Button
-          onClick={() => setShowContact(!showContact)}
-          className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm px-4 py-2 rounded-lg shadow-lg"
-        >
-          Contact
-        </Button>
-
-        {/* Contact Popup */}
-        {showContact && (
-          <Card className="absolute bottom-16 left-0 w-72 xl:w-80 shadow-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-blue-50 animate-in slide-in-from-bottom-4">
-            <CardContent className="p-4 xl:p-6">
-              <div className="flex justify-between items-start mb-4">
-                <h4 className="font-bold text-sm xl:text-base text-primary">Quick Contact</h4>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowContact(false)}
-                  className="h-6 w-6 p-0"
-                >
-                  <X className="w-4 h-4" />
-                </Button>
-              </div>
-              <div className="flex items-center space-x-3 xl:space-x-4 mb-4 xl:mb-5">
-                <div className="w-14 h-16 xl:w-16 xl:h-20 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
-                  <img 
-                    src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
-                    alt="Advocate Ajay Shankar Sharma" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm xl:text-base text-primary">Advocate Ajay Shankar Sharma</h4>
-                  <p className="text-xs xl:text-sm text-muted-foreground font-medium">33+ Years Experience</p>
-                  <p className="text-xs xl:text-sm text-muted-foreground">Based in Hapur</p>
-                </div>
-              </div>
-              <div className="bg-primary/10 rounded-lg p-3 xl:p-4 mb-4 xl:mb-5">
-                <p className="text-xs xl:text-sm text-primary font-bold mb-2">🏛️ Legacy</p>
-                <p className="text-xs xl:text-sm text-muted-foreground leading-relaxed">Get immediate legal assistance. Expert advice on property matters available now.</p>
-              </div>
-              <div className="space-y-2 xl:space-y-3">
-                <a href="tel:7037455191">
-                  <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-xs xl:text-sm">
-                    <Phone className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                    Call Now
-                  </Button>
-                </a>
-                <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50 font-semibold text-xs xl:text-sm">
-                    <MessageCircle className="w-3 h-3 xl:w-4 xl:h-4 mr-2" />
-                    Chat Now
-                  </Button>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-      </div>
-
       {/* Hero Section */}
-      <section id="home" className="py-8 md:py-16 bg-gradient-to-r from-blue-50 to-blue-100">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-                Trusted Legal Services for Property Matters
+              <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold text-primary mb-4 md:mb-6 leading-tight">
+                India's Most Trusted Property Legal Service Platform
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                With over 75 years of heritage, we provide expert legal consultation, documentation, and registration services from our Hapur office.
+              <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
+                75+ years of legal heritage. Expert property documentation, registration, and consultation services. 
+                From Sale Deed to Mutation - we handle it all with precision and trust.
               </p>
-              <a href="/book-consultant">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-4">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Book a Consultation
-                </Button>
-              </a>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
-                  alt="Advocate Ajay Shankar Sharma - Professional Legal Services" 
-                  className="w-full max-w-md rounded-xl shadow-2xl border-4 border-white"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-lg shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">33+</div>
-                    <div className="text-sm">Years Experience</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* New Content Section */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <Scale className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Legal Expertise</h3>
-                <p className="text-muted-foreground">
-                  Over three generations of legal expertise in property law and consultation.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <Users className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Client Focused</h3>
-                <p className="text-muted-foreground">
-                  Personalized legal solutions tailored to your unique property needs.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <Receipt className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Transparent Pricing</h3>
-                <p className="text-muted-foreground">
-                  Clear and upfront consultation fees with no hidden charges.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Legacy Section with Family Photos */}
-      <section className="py-8 md:py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-primary mb-4">
-              Generations of Legal Tradition
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our family has been in the legal service sector. Today, Advocate Ajay Shankar Sharma continues this legacy, 
-              combining traditional legal expertise with digital innovation to serve the entire region from Hapur.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-10">
-            <div className="text-center">
-              <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
-                <img 
-                  src="/lovable-uploads/07000678-35ac-4da5-95ff-0e13b8936274.png" 
-                  alt="Late Shri Nagendra Dutt Sharma - License No. 1 Holder" 
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Late Shri Nagendra Dutt Sharma</h3>
-              <p className="text-base md:text-lg text-muted-foreground">License No. 1 Holder</p>
-              <p className="text-sm md:text-base text-muted-foreground">Founder of Legal Heritage</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-red-700 shadow-xl">
-                <img 
-                  src="/lovable-uploads/4d373dc0-a905-4b85-aa59-a2dde192f61f.png" 
-                  alt="Late Shri Narottam Dutt Sharma - Legal Family Heritage" 
-                  className="w-full h-full object-cover object-center scale-110"
-                />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Late Shri Narottam Dutt Sharma</h3>
-              <p className="text-base md:text-lg text-muted-foreground">Family Legal Tradition</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-24 h-32 md:w-32 md:h-40 mx-auto mb-4 rounded-lg overflow-hidden border-4 border-primary shadow-xl">
-                <img 
-                  src="/lovable-uploads/a5616b2f-0963-4545-87ba-000cd45c804a.png" 
-                  alt="Current Advocate" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Advocate Ajay Shankar Sharma</h3>
-              <p className="text-base md:text-lg text-muted-foreground">Current Legal Expert</p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">Three Generations of Trust - Serving from Hapur</h3>
-              <p className="text-muted-foreground mb-6 text-lg md:text-xl leading-relaxed">
-                The tradition is now carried forward by Advocate Ajay Shankar Sharma from Hapur, 
-                fulfilling all your property-related legal needs with the same dedication and expertise.
-              </p>
-              <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
-                <div className="flex items-center">
-                  <Award className="w-5 h-5 md:w-6 md:h-6 text-red-700 mr-3" />
-                  <span className="text-base md:text-lg font-semibold">License No. 1 Legacy</span>
-                </div>
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=PQJG%2B28+Hapur%2C+Uttar+Pradesh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center hover:text-primary transition-colors cursor-pointer"
-                >
-                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary mr-3" />
-                  <span className="text-base md:text-lg font-semibold">Hapur Office Location</span>
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                <a href="/book-consultant">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
+                    <Calendar className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                    Book Free Consultation
+                  </Button>
+                </a>
+                <a href="tel:7037455191">
+                  <Button size="lg" variant="outline" className="font-semibold text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
+                    <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                    Call: 7037455191
+                  </Button>
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Online Consultation with Advocate Photo */}
-      <section className="py-8 md:py-12 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Online Legal Consultation
-              </h2>
-              <p className="mb-6 text-lg md:text-xl leading-relaxed">
-                Connect with Advocate Ajay Shankar Sharma from the comfort of your home. Choose phone, video, or WhatsApp consultation.
-              </p>
-              <a href="/book-consultant">
-                <Button size="lg" variant="secondary" className="font-semibold px-8 py-4">
-                  <Clock className="w-5 h-5 mr-2" />
-                  Book Your Session
-                </Button>
-              </a>
-            </div>
-            <div className="flex justify-center">
+            <div className="text-center">
               <img 
                 src="/lovable-uploads/7fcb1cb6-ab59-4fd4-ac3a-873cde116cc8.png" 
                 alt="Advocate Ajay Shankar Sharma" 
-                className="rounded-xl shadow-lg w-64 md:w-80 border-4 border-white/20"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-primary/20"
               />
             </div>
           </div>
@@ -378,36 +81,68 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-8 md:py-12 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Our Services
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center text-primary mb-8 md:mb-12">
+            Our Legal Services
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <Gavel className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Property Registration</h3>
-                <p className="text-muted-foreground">
-                  Expert assistance in property registration and documentation.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <FileText className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Sale Deed Registration</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Complete Sale Deed drafting, verification, and registration services with government compliance.
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <FileText className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Legal Documentation</h3>
-                <p className="text-muted-foreground">
-                  Preparation and review of legal documents related to property.
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <Building2 className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Property Mutation</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Name transfer, property mutation, and revenue record updates with municipal authorities.
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent>
-                <Laptop className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-2">Online Consultation</h3>
-                <p className="text-muted-foreground">
-                  Convenient online consultation via phone, video, or chat.
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <Stamp className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Stamp Duty Cases</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Expert resolution of stamp duty disputes, deficiency cases, and compliance issues.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <Shield className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Document Verification</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Thorough verification of property documents, title clearance, and legal due diligence.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <BookOpen className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Legal Consultation</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Expert legal advice on property matters, inheritance, and real estate transactions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0 text-center">
+                <FileText className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Will & POA Drafting</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Professional drafting of Wills, Power of Attorney, and other legal documents.
                 </p>
               </CardContent>
             </Card>
@@ -415,159 +150,268 @@ const Index = () => {
         </div>
       </section>
 
-
-      {/* Testimonials Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
+      {/* Why Choose Us */}
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            What Our Clients Say
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center text-primary mb-8 md:mb-12">
+            Why Choose TiewalaVakil?
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 border-2 border-primary/10">
-                <CardContent className="p-6 md:p-8">
-                  <div className="flex justify-center mb-4">
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-muted-foreground mb-6 text-lg leading-relaxed italic">"{testimonial.feedback}"</p>
-                    <div className="border-t border-primary/20 pt-4">
-                      <p className="font-bold text-primary text-lg">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">Satisfied Client</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <Card className="p-6 md:p-8 text-center hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <Award className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">75+ Years Heritage</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Three generations of legal expertise serving clients with dedication and professional excellence.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 text-center hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <Scale className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Expert Legal Team</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Led by Advocate Ajay Shankar Sharma with 33+ years of specialized property law experience.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 text-center hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-0">
+                <Users className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-4 md:mb-6" />
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Trusted by Thousands</h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Successfully handled thousands of property cases with 100% client satisfaction and transparency.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Video Testimonials Section */}
-      <section className="py-8 md:py-12 bg-background">
+      {/* Testimonials */}
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Client Consultation Sessions
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center text-primary mb-8 md:mb-12">
+            Client Testimonials
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {videoTestimonials.map((video) => (
-              <Card key={video.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={`${video.name} consultation session`}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="bg-white/90 rounded-full p-4 hover:bg-white transition-colors cursor-pointer">
-                      <Play className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                    Live Session
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0">
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-base md:text-lg mb-4 leading-relaxed italic">
+                  "Excellent service for my property registration. Advocate Sharma handled everything professionally 
+                  and the process was smooth. Highly recommended!"
+                </p>
+                <div className="flex items-center">
+                  <User className="w-8 h-8 text-primary mr-3" />
+                  <div>
+                    <p className="font-semibold text-primary">Rajesh Kumar</p>
+                    <p className="text-sm text-muted-foreground">Property Buyer, Hapur</p>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg text-primary mb-1">{video.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{video.title}</p>
-                  <p className="text-muted-foreground text-sm">"{video.feedback}"</p>
-                </CardContent>
-              </Card>
-            ))}
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0">
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-base md:text-lg mb-4 leading-relaxed italic">
+                  "Best legal service in Hapur! They helped me with stamp duty case and mutation. 
+                  Very transparent pricing and quick resolution."
+                </p>
+                <div className="flex items-center">
+                  <User className="w-8 h-8 text-primary mr-3" />
+                  <div>
+                    <p className="font-semibold text-primary">Priya Sharma</p>
+                    <p className="text-sm text-muted-foreground">Landowner, Pilkhuwa</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-0">
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-base md:text-lg mb-4 leading-relaxed italic">
+                  "Traditional family lawyers with modern approach. They saved my property from legal disputes. 
+                  Grateful for their expertise and guidance."
+                </p>
+                <div className="flex items-center">
+                  <User className="w-8 h-8 text-primary mr-3" />
+                  <div>
+                    <p className="font-semibold text-primary">Amit Singh</p>
+                    <p className="text-sm text-muted-foreground">Business Owner, Meerut</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Our Office & Services Gallery
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center text-primary mb-8 md:mb-12">
+            Our Office Gallery
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryItems.map((src, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
                 <img 
-                  src={src} 
-                  alt={`Office consultation session ${index + 1}`} 
-                  className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-300 group-hover:brightness-110" 
+                  src="/lovable-uploads/39b7aae8-0209-4926-8db2-d52354527704.png" 
+                  alt="Office Interior" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Modern Office Setup</p>
+                </div>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground text-lg">
-              Professional legal consultations and documentation services at our Hapur office
-            </p>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/31c9ac15-bbdd-4420-a700-ea74291c7028.png" 
+                  alt="Legal Documentation" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Legal Documentation Process</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/98917bca-9155-41eb-9652-10af67e03728.png" 
+                  alt="Client Consultation" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Client Consultation Room</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/ed62dcfa-e067-48b4-a735-809bf4e22ca3.png" 
+                  alt="Legal Library" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Legal Reference Library</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/fe348bb1-57a0-40f4-9d2e-b9bd47f61a16.png" 
+                  alt="Government Office" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Government Registration Office</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/061017e6-8ed4-47a9-9ad1-85295e52f719.png" 
+                  alt="Team Meeting" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-lg">Team Strategy Meeting</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Frequently Asked Questions
+      {/* CTA Section */}
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold mb-4 md:mb-6">
+            Ready to Secure Your Property Rights?
           </h2>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-300 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center p-4 text-left font-semibold text-primary focus:outline-none hover:bg-gray-50 transition-colors"
-                >
-                  <span>{faq.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-300 ${
-                      openFAQ === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openFAQ === index && (
-                  <div className="p-4 text-muted-foreground border-t border-gray-300 bg-gray-50">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
+          <p className="text-lg md:text-xl xl:text-2xl mb-8 md:mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
+            Don't let property legal issues become complicated. Get expert consultation from Hapur's most trusted legal family today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+            <a href="/book-consultant">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <Calendar className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                Book Free Consultation
+              </Button>
+            </a>
+            <a href="tel:7037455191">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                Call: 7037455191
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-amber-50 text-slate-800">
+      <footer className="py-12 bg-amber-50 text-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-10">
+          <div className="grid md:grid-cols-4 gap-8 md:gap-10">
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <img 
                   src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
                   alt="Tiewala Vakil Logo" 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
-              <p className="text-slate-700 mb-6 leading-relaxed text-lg">
+              <p className="text-slate-600 mb-6 leading-relaxed text-base md:text-lg">
                 India's trusted property legal service platform, with 75+ years of heritage. 
-                We simplify registration, documentation and consultation services from our Hapur office.
+                We simplify registration, documentation and consultation services.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-xl">Contact</h4>
-              <div className="space-y-4 text-slate-700">
-                <div className="flex items-center text-lg">
-                  <Phone className="w-5 h-5 mr-3" />
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Contact</h4>
+              <div className="space-y-4 text-slate-600">
+                <div className="flex items-center text-base md:text-lg">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                   7037455191
                 </div>
-                <div className="flex items-center text-lg">
-                  <MessageCircle className="w-5 h-5 mr-3" />
+                <div className="flex items-center text-base md:text-lg">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                   WhatsApp: 7037455191
                 </div>
-                <div className="text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-lg">Email: support@tiewalavakil.in</div>
+                <div className="text-base md:text-lg">Email: tiewalavakil@gmail.com</div>
               </div>
               <div className="flex space-x-4 mt-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
@@ -589,9 +433,13 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
-              <div className="text-slate-600">
-                <p className="text-base md:text-lg mb-4">
-                  Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
+              <div className="text-slate-600 mb-4">
+                <p className="text-base md:text-lg mb-2 flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Sub-Registrar Office Road, Near Tehsil, Hapur - 245101, Uttar Pradesh
+                </p>
+                <p className="text-sm text-slate-500">
+                  Current Location: Chamber no. 4, Tehsil Compound Hapur
                 </p>
               </div>
             </div>

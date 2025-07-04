@@ -47,12 +47,11 @@ const Contact = () => {
                 className="h-16 md:h-24 w-auto"
               />
             </div>
-            <nav className="hidden lg:flex space-x-4 xl:space-x-6">
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
               <a href="/" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Home</a>
               <a href="/about" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">About Us</a>
               <a href="/services" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="/blog" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-              <a href="/news" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">News & Updates</a>
               <a href="/privacy" className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">Privacy</a>
               <a href="/contact" className="text-primary font-bold text-sm xl:text-base">Contact Us</a>
             </nav>
@@ -66,7 +65,7 @@ const Contact = () => {
               <a href="tel:7037455191">
                 <Button variant="outline" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2">
                   <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                  <span className="hidden sm:inline">Call: </span>7037455191
+                  Call
                 </Button>
               </a>
             </div>
@@ -79,11 +78,66 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold text-primary mb-4 md:mb-6 leading-tight">
-              Contact Us
+              📞 Contact Us – Get Trusted Legal Help in Hapur
             </h1>
             <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-              Get in touch with Hapur's most trusted legal expert. We're here to help with all your property legal needs.
+              Have a legal query or need expert assistance with your property documents? We're here to help. At Tiewalavakil, we offer professional legal services backed by 33+ years of experience in property law, documentation, registration, mutation, and more.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services We Provide */}
+      <section className="py-8 md:py-12 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-8">
+            💼 Services We Provide
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Sale Deed Drafting & Registration</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Gift Deed, Lease Deed, Will, and Power of Attorney</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Mutation / Name Transfer</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Property Document Verification</h3>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Stamp Duty Case Resolution</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Legal Advice & Consultation</h3>
+              </CardContent>
+            </Card>
+            <Card className="p-4 text-center hover:shadow-lg transition-all">
+              <CardContent className="p-4">
+                <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                <h3 className="font-bold text-primary mb-2">Online Legal Assistance Available</h3>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -95,10 +149,37 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-6 md:mb-8">
-                Get In Touch
+                📍 Office Location
               </h2>
               
+              <Card className="p-6 mb-6 bg-primary/5">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-bold text-primary mb-4">Tiewalavakil – Advocate Ajay Shankar Sharma</h3>
+                  <div className="space-y-3 text-muted-foreground">
+                    <p className="flex items-center text-lg">
+                      <MapPin className="w-5 h-5 mr-3 text-primary" />
+                      Sub-Registrar Office Road, Near Tehsil, Hapur, Uttar Pradesh – 245101
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
+                <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-0">
+                    <div className="flex items-center space-x-3 md:space-x-4">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                        <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-primary">🕘 Office Hours</h3>
+                        <p className="text-muted-foreground text-base md:text-lg">Monday to Saturday: 10:00 AM – 5:30 PM</p>
+                        <p className="text-xs md:text-sm text-muted-foreground">(Closed on Sundays and government holidays)</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
                 <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 md:space-x-4">
@@ -106,9 +187,9 @@ const Contact = () => {
                         <Phone className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-lg md:text-xl font-bold text-primary">Phone</h3>
+                        <h3 className="text-lg md:text-xl font-bold text-primary">📞 Call Us</h3>
                         <p className="text-muted-foreground text-base md:text-lg">7037455191</p>
-                        <p className="text-xs md:text-sm text-muted-foreground">Available 24/7 for urgent matters</p>
+                        <p className="text-xs md:text-sm text-muted-foreground">Available for urgent matters</p>
                       </div>
                     </div>
                   </CardContent>
@@ -121,7 +202,7 @@ const Contact = () => {
                         <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />
                       </div>
                       <div>
-                        <h3 className="text-lg md:text-xl font-bold text-primary">WhatsApp</h3>
+                        <h3 className="text-lg md:text-xl font-bold text-primary">💬 WhatsApp</h3>
                         <p className="text-muted-foreground text-base md:text-lg">7037455191</p>
                         <p className="text-xs md:text-sm text-muted-foreground">Quick legal consultation via WhatsApp</p>
                       </div>
@@ -136,24 +217,9 @@ const Contact = () => {
                         <Mail className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
                       </div>
                       <div>
-                        <h3 className="text-lg md:text-xl font-bold text-primary">Email</h3>
-                        <p className="text-muted-foreground text-base md:text-lg">support@tiewalavakil.in</p>
+                        <h3 className="text-lg md:text-xl font-bold text-primary">📧 Email</h3>
+                        <p className="text-muted-foreground text-base md:text-lg">tiewalavakil@gmail.com</p>
                         <p className="text-xs md:text-sm text-muted-foreground">Send detailed queries via email</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center">
-                        <MapPin className="w-5 h-5 md:w-6 md:h-6 text-red-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg md:text-xl font-bold text-primary">Office Location</h3>
-                        <p className="text-muted-foreground text-base md:text-lg">Hapur, Uttar Pradesh</p>
-                        <p className="text-xs md:text-sm text-muted-foreground">Visit us for in-person consultation</p>
                       </div>
                     </div>
                   </CardContent>
@@ -175,6 +241,7 @@ const Contact = () => {
                       <h3 className="text-lg md:text-xl font-bold text-primary">Advocate Ajay Shankar Sharma</h3>
                       <p className="text-sm md:text-base text-muted-foreground">33+ Years Experience</p>
                       <p className="text-xs md:text-sm text-muted-foreground">Available for immediate consultation</p>
+                      <p className="text-xs md:text-sm text-primary font-semibold">🌐 Website: www.tiewalavakil.in</p>
                     </div>
                   </div>
                 </CardContent>
@@ -186,8 +253,11 @@ const Contact = () => {
               <Card className="border-2 border-primary/30">
                 <CardContent className="p-6 md:p-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6">
-                    Send Us a Message
+                    📩 Send Us Your Query
                   </h2>
+                  <p className="text-muted-foreground mb-6">
+                    Have a question? Fill out the contact form below or send us a message on WhatsApp. Our team will get back to you as soon as possible.
+                  </p>
                   <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                       <div>
@@ -266,43 +336,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Office Hours */}
-      <section className="py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-center text-primary mb-8 md:mb-12">
-            Office Hours & Availability
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            <Card className="text-center p-4 md:p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-4 md:p-6">
-                <Clock className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Regular Hours</h3>
-                <p className="text-muted-foreground mb-2 text-sm md:text-base">Monday - Saturday</p>
-                <p className="text-base md:text-lg font-semibold">9:00 AM - 6:00 PM</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-4 md:p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary">
-              <CardContent className="p-4 md:p-6">
-                <Phone className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Emergency</h3>
-                <p className="text-muted-foreground mb-2 text-sm md:text-base">24/7 Available</p>
-                <p className="text-base md:text-lg font-semibold">Call: 7037455191</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-4 md:p-6 hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-4 md:p-6">
-                <MessageCircle className="w-10 h-10 md:w-12 md:h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg md:text-xl font-bold text-primary mb-2">WhatsApp</h3>
-                <p className="text-muted-foreground mb-2 text-sm md:text-base">Quick Response</p>
-                <p className="text-base md:text-lg font-semibold">Within 30 minutes</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
@@ -310,7 +343,7 @@ const Contact = () => {
             Ready to Get Legal Help?
           </h2>
           <p className="text-lg md:text-xl mb-6 md:mb-8 opacity-90 max-w-2xl mx-auto">
-            Don't wait for legal issues to become complicated. Contact us today for expert legal advice and solutions.
+            Whether you need a Sale Deed drafted, help with Stamp Duty issues, or advice on name transfer (mutation)—you can easily reach out to us through phone, WhatsApp, or by visiting our office in Hapur.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base md:text-lg font-semibold px-6 md:px-8 py-3 md:py-4">
@@ -322,29 +355,32 @@ const Contact = () => {
               WhatsApp Now
             </Button>
           </div>
+          <p className="text-sm mt-4 opacity-75">
+            Tiewalavakil – Delivering Legally Accurate, Timely, and Trusted Legal Services in Hapur Since 1950s.
+          </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 md:py-16 bg-slate-900 text-white">
+      <footer className="py-12 bg-amber-50 text-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid md:grid-cols-4 gap-8 md:gap-10">
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <img 
                   src="/lovable-uploads/277f1b46-80f1-4bc3-85ff-7189eedb6bea.png" 
                   alt="Tiewala Vakil Logo" 
-                  className="h-12 md:h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed text-base md:text-lg">
+              <p className="text-slate-600 mb-6 leading-relaxed text-base md:text-lg">
                 India's trusted property legal service platform, with 75+ years of heritage. 
-                We simplify registration, documentation and consultation services from our Hapur office.
+                We simplify registration, documentation and consultation services.
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg md:text-xl">Contact</h4>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <div className="flex items-center text-base md:text-lg">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                   7037455191
@@ -353,36 +389,41 @@ const Contact = () => {
                   <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                   WhatsApp: 7037455191
                 </div>
-                <div className="text-base md:text-lg">Email: support@tiewalavakil.in</div>
-                <div className="text-base md:text-lg">Hapur, Uttar Pradesh</div>
+                <div className="text-base md:text-lg">Email: tiewalavakil@gmail.com</div>
+              </div>
+              <div className="flex space-x-4 mt-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
+                  <span className="font-bold text-sm md:text-base text-white">f</span>
+                </div>
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                </div>
               </div>
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg md:text-xl">Quick Links</h4>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/services" className="hover:text-white transition-colors text-base md:text-lg">Services</a></div>
-                <div><a href="/about" className="hover:text-white transition-colors text-base md:text-lg">About Us</a></div>
-                <div><a href="/news" className="hover:text-white transition-colors text-base md:text-lg">News & Updates</a></div>
-                <div><a href="/book-consultant" className="hover:text-white transition-colors text-base md:text-lg">Book Consultant</a></div>
+              <div className="space-y-3 text-slate-600">
+                <div><a href="/services" className="hover:text-slate-800 transition-colors text-base md:text-lg">Services</a></div>
+                <div><a href="/about" className="hover:text-slate-800 transition-colors text-base md:text-lg">About Us</a></div>
+                <div><a href="/blog" className="hover:text-slate-800 transition-colors text-base md:text-lg">Blog</a></div>
+                <div><a href="/book-consultant" className="hover:text-slate-800 transition-colors text-base md:text-lg">Book Consultant</a></div>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-lg md:text-xl">Connect</h4>
-              <div className="flex space-x-4">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                  <span className="font-bold text-sm md:text-base">f</span>
-                </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-colors">
-                  <span className="font-bold text-sm md:text-base">in</span>
-                </div>
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+              <h4 className="font-bold mb-6 text-lg md:text-xl">Office Location</h4>
+              <div className="text-slate-600 mb-4">
+                <p className="text-base md:text-lg mb-2 flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Sub-Registrar Office Road, Near Tehsil, Hapur - 245101, Uttar Pradesh
+                </p>
+                <p className="text-sm text-slate-500">
+                  Current Location: Chamber no. 4, Tehsil Compound Hapur
+                </p>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-gray-400">
-            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust</p>
+          <div className="border-t border-slate-300 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-slate-500">
+            <p className="text-base md:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
           </div>
         </div>
       </footer>
