@@ -132,22 +132,22 @@ const Blog = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
+      <section className="py-8 md:py-12 lg:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             Need Legal Consultation?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
             Have questions about property law or need expert legal advice? Contact us today.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a href="/contact">
-              <Button size="lg" variant="secondary" className="font-semibold px-8 py-4">
+              <Button size="lg" variant="secondary" className="font-semibold px-6 md:px-8 py-3 md:py-4 w-full md:w-auto">
                 Contact Us
               </Button>
             </a>
             <a href="tel:7037455191">
-              <Button size="lg" variant="outline" className="font-semibold px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" className="font-semibold px-6 md:px-8 py-3 md:py-4 border-white text-white bg-transparent border-2 w-full md:w-auto">
                 Call: 7037455191
               </Button>
             </a>

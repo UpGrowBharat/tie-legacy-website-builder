@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -247,17 +246,7 @@ const Privacy = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Back to Home Button */}
-      <div className="container mx-auto px-4 py-4">
-        <a href="/">
-          <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
-        </a>
-      </div>
-
-      {/* Privacy Section */}
+      {/* Hero Section */}
       <section className="py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Tab Navigation */}
@@ -297,26 +286,25 @@ const Privacy = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-8 md:py-12 bg-primary text-primary-foreground">
+      {/* Contact CTA */}
+      <section className="py-8 md:py-12 lg:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Have Questions About Our Policies?
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
+            Ready to Get Legal Assistance?
           </h2>
-          <p className="text-lg mb-6">
-            Contact Advocate Ajay Shankar Sharma for clarification on any legal matters or policies.
+          <p className="text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
+            Contact us today for expert property legal consultation and documentation services
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:7037455191">
-              <Button size="lg" variant="secondary" className="font-semibold">
-                <Phone className="w-5 h-5 mr-2" />
-                Call: 7037455191
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="/book-consultant">
+              <Button size="lg" variant="secondary" className="font-semibold px-6 md:px-8 py-3 md:py-4 w-full md:w-auto">
+                Book Consultation
               </Button>
             </a>
-            <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="font-semibold border-white text-white hover:bg-white/10">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Consultation
+            <a href="tel:7037455191">
+              <Button size="lg" className="font-semibold px-6 md:px-8 py-3 md:py-4 border-white text-white bg-transparent border-2 w-full md:w-auto">
+                <Phone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                Call Now
               </Button>
             </a>
           </div>
