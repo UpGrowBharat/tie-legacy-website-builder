@@ -11,6 +11,7 @@ import BookConsultant from "./pages/BookConsultant";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/book-consultant" element={<BookConsultant />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/sale-deed-crucial-legal-document" element={<BlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
