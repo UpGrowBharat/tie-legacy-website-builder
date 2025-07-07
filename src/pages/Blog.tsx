@@ -36,22 +36,13 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Banner Section */}
+      {/* Full Banner Section */}
       <section 
-        className="relative py-12 md:py-16 lg:py-20 bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-64 md:h-80 lg:h-96 xl:h-[500px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/lovable-uploads/ebd710f6-4054-42d6-b8df-624848df7e59.png')"
         }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
-            Legal Insights & Updates
-          </h1>
-          <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto">
-            Stay informed with expert legal advice and insights from Hapur's most trusted property law expert
-          </p>
-        </div>
       </section>
 
       {/* Blog Posts - 2 per row */}
