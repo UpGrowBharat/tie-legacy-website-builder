@@ -58,7 +58,7 @@ const Footer = () => {
                 Chamber no. 4, Tehsil Compound Hapur - 245101, Uttar Pradesh
               </p>
               <div className="pl-6">
-                <p className="text-sm md:text-base text-slate-500 mb-2">Current Location:</p>
+                <p className="text-sm md:text-base text-slate-500 mb-2">Map Location:</p>
                 <p className="text-base md:text-lg">Sub-Registrar Office Road, Near Tehsil, Hapur, Uttar Pradesh - 245101</p>
               </div>
               
@@ -70,7 +70,7 @@ const Footer = () => {
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
-                    allowFullScreen=""
+                    allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Tiewalavakil Office Location"
