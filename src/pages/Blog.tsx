@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
 
 const Blog = () => {
   const blogs = [
@@ -45,64 +46,62 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Posts */}
+      {/* Blog Posts - 2 per row */}
       <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             {blogs.map((blog) => (
-              <Card key={blog.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={blog.image} 
-                      alt={blog.title}
-                      className="w-full h-64 md:h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {blog.tags.map((tag, index) => (
-                          <span key={index} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      <h2 className="text-xl md:text-2xl font-bold text-primary mb-4 leading-tight hover:text-primary/80 transition-colors">
-                        {blog.title}
-                      </h2>
-                      
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {blog.excerpt}
-                      </p>
+              <Card key={blog.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 flex flex-col">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title}
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6 md:p-8 flex flex-col justify-between flex-grow">
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {blog.tags.map((tag, index) => (
+                        <span key={index} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                     
-                    <div>
-                      <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                        <div className="flex items-center space-x-4">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
-                            {blog.author}
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {blog.date}
-                          </div>
+                    <h2 className="text-xl md:text-2xl font-bold text-primary mb-4 leading-tight hover:text-primary/80 transition-colors">
+                      {blog.title}
+                    </h2>
+                    
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {blog.excerpt}
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center">
+                          <User className="w-4 h-4 mr-1" />
+                          {blog.author}
                         </div>
                         <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {blog.readTime}
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {blog.date}
                         </div>
                       </div>
-                      
-                      <Button className="w-full font-semibold group">
-                        Read Full Article
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {blog.readTime}
+                      </div>
                     </div>
-                  </CardContent>
-                </div>
+                    
+                    <Button className="w-full font-semibold group">
+                      Read Full Article
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </CardContent>
               </Card>
             ))}
           </div>
@@ -110,26 +109,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Stay Updated with Legal Insights
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get the latest updates on property law, legal procedures, and expert advice delivered to your inbox
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <Button className="px-6 py-3 font-semibold">
-              Subscribe
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Newsletter />
 
       {/* Contact CTA */}
       <section className="py-8 md:py-12 lg:py-16 bg-primary text-primary-foreground">

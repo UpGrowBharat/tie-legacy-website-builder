@@ -1,9 +1,9 @@
-
 import { Scale, Award, Users, Phone, FileText, Home, Shield, Clock, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
 
 const Services = () => {
   const mainServices = [
@@ -278,6 +278,9 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Section */}
+      <Newsletter />
 
       {/* Contact Section */}
       <section className="py-8 md:py-12 lg:py-16 bg-primary text-primary-foreground">

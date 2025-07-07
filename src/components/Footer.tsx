@@ -1,5 +1,5 @@
 
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -34,10 +34,19 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4 mt-6">
               <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                <span className="font-bold text-sm md:text-base text-white">f</span>
+                <Facebook className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-green-600 rounded flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors">
-                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-pink-600 rounded flex items-center justify-center cursor-pointer hover:bg-pink-700 transition-colors">
+                <Instagram className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-500 rounded flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
+                <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-400 rounded flex items-center justify-center cursor-pointer hover:bg-blue-500 transition-colors">
+                <Twitter className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-red-600 rounded flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors">
+                <Youtube className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </div>
             </div>
           </div>
@@ -48,6 +57,8 @@ const Footer = () => {
               <div><a href="/about" className="hover:text-slate-800 transition-colors text-base md:text-lg">About Us</a></div>
               <div><a href="/blog" className="hover:text-slate-800 transition-colors text-base md:text-lg">Blog</a></div>
               <div><a href="/book-consultant" className="hover:text-slate-800 transition-colors text-base md:text-lg">Book Consultant</a></div>
+              <div><a href="/contact" className="hover:text-slate-800 transition-colors text-base md:text-lg">Contact</a></div>
+              <div><a href="/privacy" className="hover:text-slate-800 transition-colors text-base md:text-lg">Privacy Policy</a></div>
             </div>
           </div>
           <div>
