@@ -36,7 +36,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Full Banner Section */}
+      {/* Banner Section - Full width, original size */}
       <section className="relative w-full">
         <img 
           src="/lovable-uploads/ebd710f6-4054-42d6-b8df-624848df7e59.png"

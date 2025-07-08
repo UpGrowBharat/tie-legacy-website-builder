@@ -10,12 +10,12 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Banner Section */}
-      <section className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden">
+      {/* Banner Section - Full width, original size */}
+      <section className="relative w-full">
         <img
           src="/lovable-uploads/740b6791-063e-46d1-8086-ff8484c972a1.png"
           alt="Contact Us Banner"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-auto object-contain"
         />
       </section>
 

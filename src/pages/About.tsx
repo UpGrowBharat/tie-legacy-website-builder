@@ -10,7 +10,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Banner Section */}
+      {/* Banner Section - Full width, original size */}
       <section className="relative w-full">
         <img 
           src="/lovable-uploads/091c3a33-46c2-4d71-81a6-51655572e8f1.png"
