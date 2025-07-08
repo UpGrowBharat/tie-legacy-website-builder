@@ -1,4 +1,3 @@
-
 import { Phone, MessageCircle, Calendar, Clock, Video, User, Mail, FileText, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -256,7 +255,7 @@ const BookConsultant = () => {
               </Button>
             </a>
             <a href="https://wa.me/917037455191" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto">
+              <Button size="lg" variant="secondary" className="bg-white text-primary font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto">
                 <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                 WhatsApp Now
               </Button>
