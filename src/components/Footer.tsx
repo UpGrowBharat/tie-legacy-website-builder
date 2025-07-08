@@ -1,5 +1,5 @@
 
-import { Phone, MessageCircle, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,21 +33,21 @@ const Footer = () => {
               <div className="text-sm md:text-base lg:text-lg">Email: support@tiewalavakil.in</div>
             </div>
             <div className="flex space-x-3 md:space-x-4 mt-4 md:mt-6">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                <Facebook className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-pink-600 rounded flex items-center justify-center cursor-pointer hover:bg-pink-700 transition-colors">
-                <Instagram className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-500 rounded flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
-                <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-400 rounded flex items-center justify-center cursor-pointer hover:bg-blue-500 transition-colors">
-                <Twitter className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </div>
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-red-600 rounded flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors">
-                <Youtube className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </div>
+              <a href="https://www.facebook.com/ajayshankarsharmatiewalavakil/" target="_blank" rel="noopener noreferrer">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
+                  <Facebook className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                </div>
+              </a>
+              <a href="https://www.instagram.com/ajayshankarsharma.tiewalavakil/" target="_blank" rel="noopener noreferrer">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-pink-600 rounded flex items-center justify-center cursor-pointer hover:bg-pink-700 transition-colors">
+                  <Instagram className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                </div>
+              </a>
+              <a href="https://www.youtube.com/@Tiewalavakil" target="_blank" rel="noopener noreferrer">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-red-600 rounded flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors">
+                  <Youtube className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                </div>
+              </a>
             </div>
           </div>
           <div>
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-slate-300 mt-6 md:mt-8 lg:mt-12 pt-4 md:pt-6 lg:pt-8 text-center text-slate-500">
-          <p className="text-sm md:text-base lg:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s</p>
+          <p className="text-sm md:text-base lg:text-lg">&copy; 2024 TiewalaVakil.in. All rights reserved. | A Legacy of Trust Since 1950s | Presented by <a href="https://www.digivizual.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-700 underline">DigiVizual</a></p>
         </div>
       </div>
     </footer>

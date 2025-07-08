@@ -58,19 +58,29 @@ const videoTestimonials = [
 
 const faqs = [
   {
-    question: "How do I book a consultation?",
+    question: "Why is a Sale Deed important?",
     answer:
-      "You can book a consultation by visiting the Book Consultant page and filling out the form.",
+      "A Sale Deed confirms legal ownership of property. Without it, your purchase isn't valid. Our expert बैनामा लेखक (Deed Writer) ensures accurate drafting and registration in Hapur.",
   },
   {
-    question: "What are the consultation fees?",
+    question: "What is Mutation and when is it needed?",
     answer:
-      "Fees vary depending on the consultation type. Phone consultation is ₹500, Video consultation is ₹800, WhatsApp consultation is ₹300, and Document review is ₹1500.",
+      "Mutation (नामांतरण) updates the owner's name in land or Nagar Palika records. It's necessary after sale, gift, or inheritance for legal recognition.",
   },
   {
-    question: "Where is your office located?",
+    question: "Can I verify documents before buying property?",
     answer:
-      "Our office is located at Chamber no. 4, Tehsil Compound Hapur - 245101, Hapur, Uttar Pradesh.",
+      "Yes. We provide document verification services in Hapur to check title, registry, mutation, and prevent fraud.",
+  },
+  {
+    question: "Do I need legal advice for property matters?",
+    answer:
+      "Definitely. Our experienced Advocate and बैनामा लेखक offers clear legal advice for disputes, ownership, and documentation.",
+  },
+  {
+    question: "Can I get legal help online from Hapur?",
+    answer:
+      "Yes. We offer online property legal help for drafting, consultation, and stamp duty calculation — through WhatsApp or call.",
   },
 ];
 
