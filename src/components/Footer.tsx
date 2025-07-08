@@ -1,4 +1,3 @@
-
 import { Phone, MessageCircle, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
@@ -30,7 +29,7 @@ const Footer = () => {
                 <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
                 WhatsApp: 7037455191
               </div>
-              <div className="text-sm md:text-base lg:text-lg">Email: support@tiewalavakil.in</div>
+              <div className="text-sm md:text-base lg:text-lg">Email: tiewalavakil@gmail.com</div>
             </div>
             <div className="flex space-x-3 md:space-x-4 mt-4 md:mt-6">
               <a href="https://www.facebook.com/ajayshankarsharmatiewalavakil/" target="_blank" rel="noopener noreferrer">
